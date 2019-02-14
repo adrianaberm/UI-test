@@ -1,0 +1,511 @@
+@charset "UTF-8";
+/*------------------------------------*\
+  Estilos theme: Rule of Thumb
+  2019
+  Autor: Zemoga
+\*------------------------------------*/
+body,
+h1, h2, h3, h4, h5, h6,
+dl, dd, ol, ul {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 16px;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+h1 {
+  font-size: 2em; }
+
+figcaption,
+figure,
+main {
+  display: block; }
+
+figure {
+  margin: 0; }
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+  a:active, a:hover {
+    outline-width: 0; }
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; }
+
+abbr[title],
+dfn[title] {
+  cursor: help; }
+
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder; }
+
+code,
+pre,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+blockquote {
+  margin: 0; }
+
+audio,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+img {
+  border-style: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+input {
+  line-height: normal; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0; }
+
+button,
+input {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button {
+  background-color: transparent; }
+
+optgroup {
+  font-weight: bold; }
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+fieldset {
+  margin: 0 2px;
+  padding: 0.35em 0.75em 0.625em; }
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  border: 0; }
+
+progress {
+  display: inline-block;
+  vertical-align: baseline; }
+
+textarea {
+  overflow: auto; }
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0; }
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px; }
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+details,
+menu {
+  display: block; }
+
+summary {
+  display: list-item; }
+
+canvas {
+  display: inline-block; }
+
+template {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+/**
+ * $c-primary
+ * @color
+ * @section Primary
+ */
+/**
+ * $c-primary-mild
+ * @color
+ * @section Primary
+ */
+/**
+ * $c-primary-light
+ * @color
+ * @section Primary
+ */
+/**
+ * $c-secondary
+ * @color
+ * @section Secondary
+ */
+/**
+ * $c-secondary-light
+ * @color
+ * @section Secondary
+ */
+/**
+ * $c-secondary-dark
+ * @color
+ * @section Secondary
+ */
+/**
+ * $c-error
+ * @color
+ * @section Error
+ */
+/**
+ * $c-red-light
+ * @color
+ * @section Error
+ */
+/**
+ * $c-red-dark
+ * @color
+ * @section Background
+ */
+/**
+ * $c-on-primary
+ * @color
+ * @section On
+ */
+/**
+ * $c-on-primary
+ * @color
+ * @section On
+ */
+/**
+ * $c-on-primary-dark
+ * @color
+ * @section On
+ */
+/**
+ * $c-on-primary-light
+ * @color
+ * @section On
+ */
+/**
+ * $c-bg
+ * @color
+ * @section Background
+ */
+/**
+ * $c-bg-light
+ * @color
+ * @section Background
+ */
+/**
+ * $c-bg-mild
+ * @color
+ * @section Background
+ */
+/**
+ * $c-bg-mild3
+ * @color
+ * @section Border
+ */
+/**
+ * $c-neutro
+ * @color
+ * @section Neutro
+ */
+/**
+ * $c-black
+ * @color
+ * @section Black
+ */
+/**
+ * Font family: 'Lato', sans-serif;
+ * @nuclide Font-family
+ * @section Variables Typo > Font-family
+ */
+/**
+ * Mobile: min-width: @include media-query(small)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/**
+ * Mobile landscape: min-width: @include media-query(small-m)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/**
+ * Tablet: min-width: @include media-query(medium)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/**
+ * Desktop: min-width: @include media-query(wide)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/**
+ * Desktop Large: min-width: @include media-query(large)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/**
+ * Desktop Big: min-width: @include media-query(big)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/**
+ * Desktop Huge: min-width: @include media-query(huge)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/*------------------------------------*\
+  Transversal Elements
+  #Styles for links
+\*------------------------------------*/
+/*------------------------------------*\
+  Transversal Elements
+  #Styles for botones
+\*------------------------------------*/
+button {
+  outline-width: 0;
+  border: none; }
+  button:focus {
+    outline-width: 0; }
+  button:disabled {
+    cursor: default; }
+
+/*------------------------------------*\
+Transversal Elements
+#Styles for Form
+\*------------------------------------*/
+input,
+select,
+textarea {
+  outline: none;
+  border: none; }
+
+label {
+  cursor: default;
+  color: #606060;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: "Lato", sans-serif; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0; }
+
+/*------------------------------------*\
+  Transversal Elements
+  #Styles for layout theme
+\*------------------------------------*/
+/*------------------------------------*\
+	Transversal Elements
+    #Styles for multimedia content
+    (images, audio and video)
+\*------------------------------------*/
+.rt-page img {
+  width: 100%;
+  vertical-align: bottom; }
+
+/*------------------------------------*\
+	Transversal Elements
+    #Styles for tables
+\*------------------------------------*/
+/*------------------------------------*\
+    Transversal Elements
+    #Styles for Titles
+\*------------------------------------*/
+/*------------------------------------*\
+    Transversal Elements
+    #Styles for text
+\*------------------------------------*/
+/**
+  * Class: .rt-theme, esta clase de la base para calcular el tamaño de la fuente en rems
+  * @atom Base: HTML
+  * @section Typography
+  * @markup
+  *  <html class="rt-theme">
+  *     ...
+  *  </html>
+  */
+.rt-theme {
+  font-size: 16px;
+  font-size: 1rem; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+.rt-strong {
+  font-weight: 700; }
+
+/**
+ *  Logo con texto ó tagline
+ *
+ *  @molecule Logo
+ *  @markup
+ *    <div class="ay-header">
+ *			<a class="ay-brand" href="/" title="Ir al inicio">
+ *				<img class="ay-brand__logo--desktop" src="static/img/ay-pec-logo-desktop.svg" alt="Logo Povenir clic desktop"></a>
+ *        <p class="ay-brand__tagline ay-small">“Eso que tanto quieres, merece una gran oportunidad”</p>
+ *       </div>
+ */
+/*------------------------------------*\
+// Component: Footer
+//*------------------------------------*/
+/*------------------------------------*\
+    #Print styles
+\*------------------------------------*/
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }

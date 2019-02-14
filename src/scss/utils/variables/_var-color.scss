@@ -1,0 +1,199 @@
+//*------------------------------------*\
+// Variables Color
+//*------------------------------------*/
+// Palette: No usar estas variables en los estilos
+
+/**
+ * $c-primary
+ * @color
+ * @section Primary
+ */
+
+$green: #557630;
+
+/**
+ * $c-primary-mild
+ * @color
+ * @section Primary
+ */
+
+$green-apple: #85B400;
+
+/**
+ * $c-primary-light
+ * @color
+ * @section Primary
+ */
+
+$green-light: #AAB400;
+
+/**
+ * $c-secondary
+ * @color
+ * @section Secondary
+ */
+
+$orange: #FFA02F;
+
+/**
+ * $c-secondary-light
+ * @color
+ * @section Secondary
+ */
+
+$yellow: #EEAF00;
+
+/**
+ * $c-secondary-dark
+ * @color
+ * @section Secondary
+ */
+
+$yellow-dark: #F3AC24;
+
+/**
+ * $c-error
+ * @color
+ * @section Error
+ */
+
+$red: #EF4723;
+
+/**
+ * $c-red-light
+ * @color
+ * @section Error
+ */
+
+$red-light: #F3705A;
+
+/**
+ * $c-red-dark
+ * @color
+ * @section Background
+ */
+
+$red-dark: #C25A49;
+
+
+/**
+ * $c-on-primary
+ * @color
+ * @section On
+ */
+
+$blue: #72B6BF;
+
+
+/**
+ * $c-on-primary
+ * @color
+ * @section On
+ */
+
+$grey: #606060;
+
+/**
+ * $c-on-primary-dark
+ * @color
+ * @section On
+ */
+
+$grey-dark: #808081;
+
+/**
+ * $c-on-primary-light
+ * @color
+ * @section On
+ */
+
+$grey-mild: #E0E0E0;
+
+/**
+ * $c-bg
+ * @color
+ * @section Background
+ */
+
+$grey-light2: #F8F8F8;
+
+/**
+ * $c-bg-light
+ * @color
+ * @section Background
+ */
+
+$grey-light: #F4F4F4;
+
+/**
+ * $c-bg-mild
+ * @color
+ * @section Background
+ */
+
+$grey-mild2: #EDEEEE;
+
+/**
+ * $c-bg-mild3
+ * @color
+ * @section Border
+ */
+
+$grey-mild3: #E5E5E5;
+
+/**
+ * $c-neutro
+ * @color
+ * @section Neutro
+ */
+
+$white: #fff;
+
+/**
+ * $c-black
+ * @color
+ * @section Black
+ */
+
+ $c-black: #000;
+
+$white: #fff;
+//*------------------------------------*\
+// Variables Color Theme
+// Usar variantes: light,mild,dark
+//*------------------------------------*/
+// Neutro
+$c-neutro: $white;
+// Primary
+// se muestra con mayor frecuencia en las pantallas y componentes.
+$c-primary: $green;
+$c-primary-mild: $green-apple;
+$c-primary-light: $green-light;
+// Secondary
+// Color para acentuar elementos: Botones de acción, Controles de selección, Resaltar texto, Barras de progreso, Enlaces y titulares
+$c-secondary: $orange;
+$c-secondary-light: $yellow;
+$c-secondary-dark: $yellow-dark;
+// Surface
+// Los colores de la superficie afectan a las superficies de los componentes, como cards, sheets, y menús
+// Error
+// colores que indican el estado de errores
+$c-error: $red;
+$c-error-light: $red-light;
+// Bg
+// color de fondo aparece detrás del contenido.
+$c-bg: $grey-light2;
+$c-bg-light: $grey-light;
+$c-bg-mild: $grey-mild2;
+$c-bg-dark: $grey-mild;
+$c-bg-red: $red-light;
+$c-bg-red-dark: $red-dark;
+$c-bg-blue: $blue;
+// On
+// elementos de color que se colocan encima de las superficies
+$c-on-primary: $grey;
+$c-on-primary-light: $grey-dark;
+// Border
+$c-border: $grey-mild3;
+$c-border-primary: $orange;
+$c-border-secondary: $green-light;

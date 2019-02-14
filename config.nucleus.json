@@ -1,0 +1,14 @@
+{
+    "title":"Guía de Estilos | UI Test Zemoga",
+    "files":[
+      "./src/scss/**/*.scss"
+    ],
+    "target": "./dist/styleguide",
+    "css":"../static/css/main.css",
+    "namespace": null,
+    "verbose":3,
+    "counterCSS":null,
+    "staticLipsum":false,
+    "placeholderService":false,
+    "template":"./src/TemplateNucleus"
+}

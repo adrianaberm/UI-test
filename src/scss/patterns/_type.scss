@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    Transversal Elements
+    #Styles for text
+\*------------------------------------*/
+/**
+  * Class: .rt-theme, esta clase de la base para calcular el tamaño de la fuente en rems
+  * @atom Base: HTML
+  * @section Typography
+  * @markup
+  *  <html class="rt-theme">
+  *     ...
+  *  </html>
+  */
+.rt-theme {
+  @include font-rem(16px);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.rt-strong {
+  font-weight: 700;
+}
+

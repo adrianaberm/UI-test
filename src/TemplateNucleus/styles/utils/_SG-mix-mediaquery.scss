@@ -1,0 +1,112 @@
+//*------------------------------------------------------*\
+  //MediaQueries first mobile with defined breakpoints
+//*------------------------------------------------------*/
+// @requires $breakpoint (se definen en variables.scss)
+    // $bp-small: 375px;
+    // $bp-small-m: 480px;
+    // $bp-small-medium: 640px;
+    // $bp-sm-md: 692px;
+    // $bp-medium: 768px;
+    // $bp-small-wide: 980px;
+    // $bp-wide: 1024px;
+    // $bp-large: 1170px;
+    // $bp-big: 1280px;
+    // $bp-huge: 1440px;
+
+// Use: @include media-query(wide) {PROPERTIES...}
+// @param $media-query - Punto de ruptura -->
+    //small 375px
+    //small-m 480px;
+    //max-small-m max 479px
+    //medium 768px;
+    //only-medium
+    //max-medium
+    //small-wide
+    //wide
+    //max-wide
+    //large
+    //max-large
+    //big
+    //huge
+
+
+@mixin media-query($media-query) {
+  @if $media-query == small {
+    @media only screen and (min-width: $bp-small) { @content; }
+  }
+  @if $media-query == small-m {
+    @media only screen and (min-width: $bp-small-m) { @content; }
+  }
+  @if $media-query == max-small-m {
+    @media only screen and (max-width: $bp-small-m - 1) { @content; }
+  }
+  @if $media-query == max-small-medium {
+    @media only screen and (max-width: $bp-small-medium - 1) { @content; }
+  }
+  @if $media-query == small-medium {
+    @media only screen and (min-width: $bp-small-medium) { @content; }
+  }
+  @if $media-query == sm-md {
+    @media only screen and (min-width: $bp-sm-md) { @content; }
+  }
+  @if $media-query == medium {
+    @media only screen and (min-width: $bp-medium) { @content; }
+  }
+  @if $media-query == only-medium {
+    @media only screen and (min-width: $bp-medium) and (max-width: $bp-wide - 1) { @content; }
+  }
+  @if $media-query == max-medium {
+    @media only screen and (max-width: $bp-medium - 1) { @content; }
+  }
+
+  @if $media-query == small-wide {
+    @media only screen and (min-width: $bp-small-wide) { @content; }
+  }
+
+  @if $media-query == wide {
+    @media only screen and (min-width: $bp-wide) { @content; }
+  }
+  @if $media-query == max-wide {
+    @media only screen and (max-width: $bp-wide - 1) { @content; }
+  }
+
+  @if $media-query == large {
+    @media only screen and (min-width: $bp-large) { @content; }
+  }
+  @if $media-query == max-large {
+    @media only screen and (max-width: $bp-large - 1) { @content; }
+  }
+   @if $media-query==big {
+     @media only screen and (min-width: $bp-big) {
+       @content;
+     }
+   }
+
+  @if $media-query == huge {
+    @media only screen and (min-width: $bp-huge) { @content; }
+  }
+
+}
+
+// Just some helpers...
+  //use: .foo{
+  //			@include  mq-wide {
+  //				PROPERTIES...
+  //			}
+  //		}
+@mixin mq-small { @include media-query(small) { @content }; }
+@mixin mq-max-small { @include media-query(max-small) { @content }; }
+@mixin mq-small-md { @include media-query(small-md) { @content }; }
+@mixin mq-max-small-medium { @include media-query(max-small-medium) { @content }; }
+@mixin mq-small-medium { @include media-query(small-medium) { @content }; }
+@mixin mq-sm-md { @include media-query(sm-md) { @content }; }
+@mixin mq-medium { @include media-query(medium) { @content }; }
+@mixin mq-only-medium { @include media-query(only-medium) { @content }; }
+@mixin mq-max-medium { @include media-query(max-medium) { @content }; }
+@mixin mq-small-wide { @include media-query(small-wide) { @content }; }
+@mixin mq-wide { @include media-query(wide) { @content }; }
+@mixin mq-max-wide { @include media-query(max-wide) { @content }; }
+@mixin mq-large { @include media-query(large) { @content }; }
+@mixin mq-max-large { @include media-query(max-large) { @content }; }
+@mixin mq-big { @include media-query(big) { @content }; }
+@mixin mq-huge { @include media-query(huge) { @content }; }

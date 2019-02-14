@@ -1,0 +1,23 @@
+/*------------------------------------*\
+  Transversal Elements
+  #Styles for botones
+\*------------------------------------*/
+
+button {
+  outline-width: 0;
+  border: none;
+
+  &:focus {
+    outline-width: 0;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+
+
+@include media-query(medium) {
+
+}

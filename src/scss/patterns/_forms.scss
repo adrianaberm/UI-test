@@ -1,0 +1,40 @@
+/*------------------------------------*\
+Transversal Elements
+#Styles for Form
+\*------------------------------------*/
+
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+}
+
+label {
+  cursor: default;
+  color: $c-on-primary;
+  @include font-rem(14px);
+  font-family: $f-regular;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+@include media-query(medium) {
+ 
+}
+
+@include media-query(medium-max) {
+  
+}
