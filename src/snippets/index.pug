@@ -12,10 +12,56 @@ block variables
 
 block content
 
-  // Section level 1: Intro
-  section
-    .ay-canvas
-     p home page
+  // Section level 1: Hero
+  section.rt-hero
+    img.rt-hero__image(src="" alt="Pope hero image")
+    .rt-canvas
+     .rt-infoBox
+      h2.rt-infoBox__title
+       span What's your opinion on 
+       | Pope Francis?
+
+      p.rt-infoBox__lead He's talking tough on clergy sexual abuse, but is he just another papal pervert protector? (thumbs down) or a true pedophile punishing pontiff? (thumbs up)
+
+      a.rt-infoBox__link(href="" title="click to vew more information") More information
+
+      .rt-infoBox__vote
+        h3 What's Your Veredict?
+
+        .rt-infoBox__voteOptions
+          a.rt-infoBox__thumb.rt-infoBox__thumb-up(href="" title="click to vote for thumbs up") Thumbs Up
+          a.rt-infoBox__thumb.rt-infoBox__thumb-down(href="" title="click to vote for thumbs down") Thumbs down
+
+    .rt-hero__closingTime
+     p Closing in
+     p 22
+      span days
+
+
+  .rt-alert
+   a(href="" title="Click to close").rt-alert__closeBtn Close
+   h1.rt-alert__title Speakout. Be heard.
+    span Be counted
+   p.rt-alert__lead Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It's easy: You share your opinion, we analize and put the data ina public report.
+
+  section.rt-vote
+   .rt-canvas
+    h2.rt-sectionTitle Votes
+    include component/voteItem
+
+  .rt-submit
+    p Is there anyone else you would want us to add?
+    a.btn.btn-large(href="" title="click to submit a name") Submit a name
+
+
+
+
+
+
+
+
+
+    
 
 
 

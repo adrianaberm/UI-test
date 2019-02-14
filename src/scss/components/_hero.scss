@@ -1,0 +1,79 @@
+/*------------------------------------*\
+   Hero styles
+\*------------------------------------*/
+
+.rt-infoBox {
+  background: $c-black;
+  color: $c-white;
+  padding: $gutter-s;
+
+  &__voteOptions {
+    @include flexbox;
+    @include align-items(center);
+  }
+
+  &__thumb {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex(1);
+    font-size: 0;
+    height: 50px;
+    text-align: center;
+
+
+    &:before {
+      content: "";
+      color: $c-white;
+      font-family: FontAwesome;
+      @include font-rem(20px);
+    }
+
+    &-up {
+      background: rgba($primary,0.5);
+      &:before {
+        content: "\f164";
+      }
+
+      &:hover {
+         background: $primary;
+      }
+    }
+
+    &-down {
+      background: rgba($secondary,0.5);
+      &:before {
+        content: "\f165";
+      }
+
+       &:hover {
+         background: $secondary;
+      }
+    }
+  }
+}
+
+.rt-hero__closingTime {
+  @include flexbox;
+  background: rgba($c-black,0.5);
+  color: $c-white;
+
+  p {
+      padding: $gutter-xs; 
+
+    &:last-of-type {
+      background: rgba($c-white,0.5);
+      width: 62%;
+      margin-left: auto;
+    }
+  }
+}
+
+
+
+@include media-query(medium) {
+  .rt-infoBox {
+    padding: 35px;
+  }
+
+}

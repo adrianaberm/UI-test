@@ -7,7 +7,7 @@ var eslint = require('gulp-eslint')
 var gulpSequence = require('gulp-sequence')
 var postcss = require('gulp-postcss')
 var autoprefixer = require('autoprefixer')
-var cssnext = require('cssnext')
+var postcssPresetEnv = require('postcss-preset-env')
 var precss = require('precss')
 var babel = require("gulp-babel");
 
@@ -52,7 +52,7 @@ gulp.task('css', function () {
     autoprefixer({
       browsers: ['last 15 version']
     }),
-    cssnext,
+    postcssPresetEnv,
     precss,
     noWebkitTransform
   ]
@@ -94,7 +94,7 @@ gulp.task('guiaEstilos-css', function () {
     autoprefixer({
       browsers: ['last 15 version']
     }),
-    cssnext,
+    postcssPresetEnv,
     precss,
     noWebkitTransform
   ]

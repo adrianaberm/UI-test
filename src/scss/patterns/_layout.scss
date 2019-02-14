@@ -5,11 +5,13 @@
 
 // contenedor section sin fondo
 
-
+.rt-canvas {
+	margin: 0 auto;
+	max-width: 1440px;
+}
 
 @include media-query(wide) {
   
-
 }
 
 @include media-query(huge) {

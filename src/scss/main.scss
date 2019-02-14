@@ -9,7 +9,6 @@
 
 @import 
 'utils/variables/var-color',
-'utils/variables/var-typo',
 'utils/variables/var-gutter',
 'utils/variables/var-canvas',
 'utils/variables/var-breakpoint';
@@ -29,16 +28,14 @@
 @import 
 'patterns/anchor',
 'patterns/buttons',
-'patterns/forms',
 'patterns/layout',
-'patterns/media',
-'patterns/table',
-'patterns/titles',
 'patterns/type';
 
 
 @import 
 'components/header',
-'components/footer';
+'components/footer',
+'components/voteItem',
+'components/hero';
 
 @import 'generic/print';

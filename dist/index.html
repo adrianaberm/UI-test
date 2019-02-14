@@ -15,6 +15,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="static/favicon/browserconfig.xml">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="static/css/main.css">
   </head>
   <body class="rt-page">
@@ -24,20 +25,184 @@
     -->
     <!-- header-->
     <header class="rt-header">
-      <p>header home</p>
+      <div class="rt-canvas">
+        <!-- Header Logo--><a class="rt-header__brand" href="/">Rule of Thumb.</a>
+        <!-- Header nav-->
+        <nav class="rt-header__nav">
+          <ul>
+            <li><a href="past-trials.html">Past Trials</a>
+              <ul class="rt-header__subnav">
+                <li><a href="">Sublevel 1</a></li>
+                <li><a href="">Sublevel 2</a></li>
+                <li><a href="">Sublevel 3</a></li>
+              </ul>
+            </li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="">Log In / Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!--main-->
     <main class="ay-page__content">
-      <!-- Section level 1: Intro-->
-      <section>
-        <div class="ay-canvas">
-          <p>home page</p>
+      <!-- Section level 1: Hero-->
+      <section class="rt-hero"><img class="rt-hero__image" src="" alt="Pope hero image">
+        <div class="rt-canvas">
+          <div class="rt-infoBox">
+            <h2 class="rt-infoBox__title"><span>What's your opinion on </span>Pope Francis?</h2>
+            <p class="rt-infoBox__lead">He's talking tough on clergy sexual abuse, but is he just another papal pervert protector? (thumbs down) or a true pedophile punishing pontiff? (thumbs up)</p><a class="rt-infoBox__link" href="" title="click to vew more information">More information</a>
+            <div class="rt-infoBox__vote">
+              <h3>What's Your Veredict?</h3>
+              <div class="rt-infoBox__voteOptions"><a class="rt-infoBox__thumb rt-infoBox__thumb-up" href="" title="click to vote for thumbs up">Thumbs Up</a><a class="rt-infoBox__thumb rt-infoBox__thumb-down" href="" title="click to vote for thumbs down">Thumbs down</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="rt-hero__closingTime">
+          <p>Closing in</p>
+          <p>22<span>days</span></p>
         </div>
       </section>
+      <div class="rt-alert"><a class="rt-alert__closeBtn" href="" title="Click to close">Close</a>
+        <h1 class="rt-alert__title">Speakout. Be heard.<span>Be counted</span></h1>
+        <p class="rt-alert__lead">Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It's easy: You share your opinion, we analize and put the data ina public report.</p>
+      </div>
+      <section class="rt-vote">
+        <div class="rt-canvas">
+          <h2 class="rt-sectionTitle">Votes</h2>
+          <!-- Vote list item-->
+          <div class="rt-vote__item">
+            <div class="rt-vote__item__img"><img src="images/img-kaney.jpg" alt="Kaney West image"></div>
+            <div class="rt-vote__item__inner">
+              <div class="rt-vote__item__content">
+                <h3 class="thumbUp-badge">Kanye West</h3>
+                <p class="rt-vote__item_data">1 month ago<span>in Entertainment</span></p>
+                <p class="rt-vote__item__description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+              </div>
+              <div class="rt-vote__item__otions">
+                <input class="rt-vote__item__thumbUp" type="radio" id="vote1" name="item1">
+                <label for="vote1">Thumbs Up</label>
+                <input class="rt-vote__item__thumbDown" type="radio" id="vote2" name="item1">
+                <label for="vote2">Thumbs Down</label>
+                <button class="rt-vote__item__voteNow" type="submit" title="click to vote note">Thumbs Up</button>
+              </div>
+              <div class="rt-vote__item__voted">
+                <p>Thank you for voting</p><a class="rt-btn" href="#" title="click to vote again">Vote again</a>
+              </div>
+              <div class="rt-vote__results">
+                <div class="rt-vote__results__thumb rt-vote__results__thumb-up" style="width:64%;">
+                  <p>64<span>%</span></p>
+                </div>
+                <div class="rt-vote__results__thumb rt-vote__results__thumb-down" style="width:36%;">
+                  <p>36<span>%</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Vote list item-->
+          <div class="rt-vote__item">
+            <div class="rt-vote__item__img"><img src="images/img-mark.jpg" alt="Mark Zuckerberg image"></div>
+            <div class="rt-vote__item__inner">
+              <div class="rt-vote__item__content">
+                <h3 class="thumbDown-badge">Mark Zuckerberg</h3>
+                <p class="rt-vote__item_data">1 month ago<span>in Business</span></p>
+                <p class="rt-vote__item__description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+              </div>
+              <div class="rt-vote__item__otions">
+                <input class="rt-vote__item__thumbUp" type="radio" id="vote3" name="item2">
+                <label for="vote3">Thumbs Up</label>
+                <input class="rt-vote__item__thumbDown" type="radio" id="vote4" name="item2">
+                <label for="vote4">Thumbs Down</label>
+                <button class="rt-vote__item__voteNow" type="submit" title="click to vote note">Thumbs Up</button>
+              </div>
+              <div class="rt-vote__item__voted">
+                <p>Thank you for voting</p><a class="rt-btn" href="#" title="click to vote again">Vote again</a>
+              </div>
+              <div class="rt-vote__results">
+                <div class="rt-vote__results__thumb rt-vote__results__thumb-up" style="width:36%;">
+                  <p>36<span>%</span></p>
+                </div>
+                <div class="rt-vote__results__thumb rt-vote__results__thumb-down" style="width:64%;">
+                  <p>64<span>%</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Vote list item-->
+          <div class="rt-vote__item">
+            <div class="rt-vote__item__img"><img src="images/img-cristina.jpg" alt="Cristina Fernandez image"></div>
+            <div class="rt-vote__item__inner">
+              <div class="rt-vote__item__content">
+                <h3 class="thumbDown-badge">Cristina Fernández de Kirchner</h3>
+                <p class="rt-vote__item_data">1 month ago<span>in Politics</span></p>
+                <p class="rt-vote__item__description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+              </div>
+              <div class="rt-vote__item__otions">
+                <input class="rt-vote__item__thumbUp" type="radio" id="vote5" name="item3">
+                <label for="vote5">Thumbs Up</label>
+                <input class="rt-vote__item__thumbDown" type="radio" id="vote6" name="item3">
+                <label for="vote6">Thumbs Down</label>
+                <button class="rt-vote__item__voteNow" type="submit" title="click to vote note">Thumbs Up</button>
+              </div>
+              <div class="rt-vote__item__voted">
+                <p>Thank you for voting</p><a class="rt-btn" href="#" title="click to vote again">Vote again</a>
+              </div>
+              <div class="rt-vote__results">
+                <div class="rt-vote__results__thumb rt-vote__results__thumb-up" style="width:36%;">
+                  <p>36<span>%</span></p>
+                </div>
+                <div class="rt-vote__results__thumb rt-vote__results__thumb-down" style="width:64%;">
+                  <p>64<span>%</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Vote list item-->
+          <div class="rt-vote__item">
+            <div class="rt-vote__item__img"><img src="images/img-malala.jpg" alt="Malala Yousafzai image"></div>
+            <div class="rt-vote__item__inner">
+              <div class="rt-vote__item__content">
+                <h3 class="thumbUp-badge">Malala Yousafzai</h3>
+                <p class="rt-vote__item_data">1 month ago<span>in Entertainment</span></p>
+                <p class="rt-vote__item__description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+              </div>
+              <div class="rt-vote__item__otions">
+                <input class="rt-vote__item__thumbUp" type="radio" id="vote7" name="item4">
+                <label for="vote7">Thumbs Up</label>
+                <input class="rt-vote__item__thumbDown" type="radio" id="vote8" name="item4">
+                <label for="vote8">Thumbs Down</label>
+                <button class="rt-vote__item__voteNow" type="submit" title="click to vote note">Thumbs Up</button>
+              </div>
+              <div class="rt-vote__item__voted">
+                <p>Thank you for voting</p><a class="rt-btn" href="#" title="click to vote again">Vote again</a>
+              </div>
+              <div class="rt-vote__results">
+                <div class="rt-vote__results__thumb rt-vote__results__thumb-up" style="width:64%;">
+                  <p>64<span>%</span></p>
+                </div>
+                <div class="rt-vote__results__thumb rt-vote__results__thumb-down" style="width:36%;">
+                  <p>36<span>%</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="rt-submit">
+        <p>Is there anyone else you would want us to add?</p><a class="btn btn-large" href="" title="click to submit a name">Submit a name</a>
+      </div>
     </main>
     <!-- Footer site-->
     <footer class="rt-footer">
-      <p>footer</p>
+      <nav class="rt-footer__nav">
+        <ul>
+          <li><a href="" title="click to go to terms">Terms and Conditions</a></li>
+          <li><a href="" title="click to see privacy">Privacy Policy</a></li>
+          <li><a href="" title="Click to contact us">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="rt-footer__social">
+        <p>Follow us</p><a href="" title="Follow us on Facebook">Facebook</a><a href="" title="Follow us on Twitter">Twitter</a>
+      </div>
     </footer>
     <!-- JS for page-->
     <script src="static/js/main.js"></script>
