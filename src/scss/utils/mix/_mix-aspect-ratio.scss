@@ -1,0 +1,23 @@
+//*----------------------------------------------------*\
+//  Aspect Ratio Mixin
+//*----------------------------------------------------*/
+// use: 
+// .foo {
+//    @include aspect-ratio(16, 9);
+// }
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+}
+
+@mixin aspect-ratio-mq($width, $height) {
+  &:before {
+    padding-top: ($height / $width) * 100%;
+  }
+}

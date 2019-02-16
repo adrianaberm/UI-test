@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    Transversal Elements
+    #Styles for text
+\*------------------------------------*/
+/**
+  * El tamaño de la fuente se calcula en rems
+  * @atom Base: HTML
+  * @section Typography
+  * @markup
+  *  <p> Lorem ipsum dolor</p>
+  */
+html {
+  font-family: 'Lato', sans-serif;
+  color: $grey;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 15px;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.rt-strong {
+  font-weight: 700;
+}
+
+/**
+  * Class: .rt-sectionTitle, Font-family: Lato, Font-weight: light,  Font-size: 40px, 16px, color: grey
+  * @atom Section Title
+  * @section Typography
+  * @markup
+  *   <h2 class="rt-sectionTitle">Votes section</h3>
+  */
+
+.rt-sectionTitle {
+  @include font-rem(40px);
+  font-weight: 300;
+  padding: $gutter-xs;
+}
+
+
+/**
+  * Class: .rt-sectionLead, Font-family: Lato, Font-weight: normal,  Font-size: 20px, 16px, color: grey
+  * @atom Section Lead
+  * @section Typography
+  * @markup
+  *   <h2 class="rt-sectionLead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis efficitur sem, eget laoreet nulla facilisis at. Mauris posuere in purus in rhoncus. </h3>
+  */
+
+.rt-sectionLead {
+  @include font-rem(20px);
+  font-weight: 400;
+  padding: 0 $gutter-xs;
+}
+
+@include media-query(wide) {
+  
+.rt-sectionTitle, .rt-sectionLead {
+  padding-left: 0;
+}
+}
+

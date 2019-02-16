@@ -1,0 +1,253 @@
+/*------------------------------------*\
+   Hero styles
+   \*------------------------------------*/
+
+   .rt-hero {
+      position: relative;
+
+      img {
+       
+        margin: 0 auto;
+      }
+   }
+
+   .rt-infoBox {
+    background: $c-black;
+    color: $c-white;
+    padding: $gutter-s;
+
+    &__lead {
+      @include font-rem(16px);
+      font-weight: 300;
+    }
+
+    &__link {
+      color: $c-white;
+      display: inline-block;
+      @include font-rem(14px);
+      font-weight: 300;
+      padding: $gutter-xs 0;
+     
+     span {
+       text-decoration: underline;
+
+     }
+
+      &:before {
+        content: "\f266";
+        font-family: FontAwesome;
+        padding-right: 5px;
+        text-decoration: none;
+      }
+
+      &:hover {
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+
+    &__vote {
+      padding: $gutter-s 0;
+    }
+
+    &__voteOptions {
+      @include flexbox;
+      @include align-items(center);
+    }
+
+    &__thumb {
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(center);
+      @include flex(1);
+      font-size: 0;
+      height: 50px;
+      pointer-events: none;
+      text-align: center;
+
+
+      &:before {
+        content: "";
+        color: $c-white;
+        font-family: FontAwesome;
+        @include font-rem(20px);
+      }
+
+      &-up {
+        background: $primary;
+        &:before {
+          content: "\f164";
+        }
+
+        &:hover {
+         background: $primary;
+       }
+     }
+
+     &-down {
+      background: $secondary;
+      &:before {
+        content: "\f165";
+      }
+
+      &:hover {
+       background: $secondary;
+     }
+   }
+ }
+}
+
+.rt-hero__closingTime {
+  @include flexbox;
+  background: rgba($c-black,0.5);
+  color: $c-white;
+
+  p {
+    padding: 0 $gutter-xs; 
+    text-align: center;
+    @include font-rem(13px);
+    text-transform: uppercase;line-height: 50px;
+
+    &:last-of-type {
+      background: rgba($c-white,0.3);
+      @include font-rem(20px);
+      margin-left: auto;
+      padding-left: $gutter-xs; 
+      position: relative;
+
+      width: 70%;
+
+      &:before{
+        bottom: 0;
+        content: "";
+        display: block;
+        width: 0;
+        height: 0px;
+        border-left: solid 8px rgba($c-black,0.3);
+        border-bottom: solid 8px transparent;
+        border-top: solid 8px transparent;
+        font-size: 0;
+        margin: auto;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
+
+
+@include media-query(medium) {
+
+     .rt-hero {
+      min-height: 534px;
+      max-height: 740px;
+      overflow: hidden;
+
+      .rt-canvas {
+        @include flexbox;
+        @include align-items(center);
+        bottom: 0;
+        top: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+
+      }
+   }
+  .rt-infoBox {
+    background: url(../images/bg-box-hero.jpg) no-repeat;
+    max-width: 492px;
+    margin: 15px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+
+
+&__title {
+  @include font-rem(60px);
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 25px;
+  padding: 35px 35px 0;
+
+  span {
+    display: block;
+    @include font-rem(16px);
+    font-weight: 300;
+  }
+}
+
+&__lead {
+      @include font-rem(21px);
+      line-height: 24px;
+      padding: 0 35px 0;
+   
+    }
+
+    &__link {
+      padding: 25px 35px 25px;
+    }
+
+     &__vote {
+      padding-top: 0;
+    h3 {
+       @include font-rem(20px);
+       padding: 0px 35px 20px;
+    }
+  }
+
+  &__thumb {
+    height: 80px;
+
+    &:before {
+      @include font-rem(40px);
+    }
+  }
+  
+  }
+
+
+.rt-hero__closingTime {
+  background: rgba($c-black, 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+
+  p{
+    text-align: right;
+    width: 35%;
+    &:last-of-type {
+    background: rgba($c-white, 0.7);
+    color: $grey;
+    text-align: left;
+    width: 65%;
+    @include font-rem(36px);
+
+    span {
+      font-weight: 300;
+      text-transform: none;
+    }
+    &:before {
+      border-left: solid 10px rgba($c-black, 0.3);
+    }
+  }
+  }
+  
+}
+
+}
+
+@include media-query(wide) {
+  .rt-hero {
+    img {
+      margin-top: -10%;
+    }
+  }
+}

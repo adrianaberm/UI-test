@@ -1,0 +1,90 @@
+// header.scss -- Header bar styles
+//
+// Copyright (C) 2016 Michael Seibt
+//
+// With contributions from:
+//  - Thomas Carlson (@thomasoc)
+//
+// This software may be modified and distributed under the terms
+// of the MIT license. See the LICENSE file for details.
+
+/**
+ * Header bar with logo, navigation, and tool icons at the top of the page.
+ *
+ * @structure Header
+ * @flag full-width
+ * @markup
+ *  <div class="SG-header">
+ *    @{include:.SG-logo}
+ *    @{include:.SG-nav-icons}
+ *    @{include:.SG-nav}
+ *  </div>
+ * @script
+ *    $('body').on('click','button',function(){
+ *        $(this).doSomething();
+ *    });
+ */
+
+.SG-header {
+  //@include reset();
+  @include flexbox;
+  @include justify-content(space-between);
+  @include align-items(center);
+  //@include clearAfter();
+  border-bottom: 1px solid $color--whitesmoke;
+  padding: 0 40px;
+  margin-bottom: 40px;
+  position: relative;
+
+  &::before {
+    content: '';
+    background: linear-gradient(to bottom, #fbfbfb, white 50%);
+    height: 39px;
+    display: block;
+    background-size: 131%;
+    border-radius: 0 0 100% 100%;
+    position: absolute;
+    bottom: -40px;
+    width: calc(100% - 80px);
+    box-shadow: 0 -23px 14px white inset;
+  }
+
+  .SG-logo {
+    @include order(1);
+    // float: left;
+    // margin-top: 8px;
+  }
+
+  .SG-nav-icons {
+    @include order(3);
+    //float: right;
+  }
+
+  .SG-nav {
+    @include order(2);
+    //position: absolute;
+    // left: 0;
+    // right: 0;
+    //margin: 0 270px;
+  }
+}
+
+
+//- Max-width: 767px
+@include media-query(max-medium) {
+  .SG-header {
+    .SG-logo {
+      @include order(1);
+    }
+
+    .SG-nav-icons {
+      @include order(2);
+
+    }
+
+    .SG-nav {
+      @include order(3);
+
+    }
+  }
+}

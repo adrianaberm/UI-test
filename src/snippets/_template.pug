@@ -1,0 +1,32 @@
+//- Variables page
+block variables
+
+//- Mixins page
+block mixins
+
+doctype html
+
+html(lang='en')
+
+
+  //-Head html
+  include template/_head
+
+  body.rt-page
+    // [if gt IE 10]>
+      <p class="ay-browserupgrade">Esta utilizando un navegador <strong>obsoleto</strong>. Para mejorar su experiencia por favor actualice su nagador <a href="http://browsehappy.com/"></p><![endif]
+
+    // header
+    include layout/_header
+
+    //main
+    main.ay-page__content
+
+      //- contenidos
+      block content
+
+    // Footer site
+    include layout/_footer
+
+    // JS for page
+    include template/_script

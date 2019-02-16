@@ -1,0 +1,51 @@
+{
+  "name": "zemoga-iu-test",
+  "version": "1.0.0",
+  "description": "Zemoga test for UI Developers candidates",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gridle": "^2.0.48",
+    "gulp-data": "^1.3.1",
+    "nucleus": "0.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styleguide": "nucleus --config config.nucleus.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianaberm/ui-test"
+  },
+  "author": "Adriana Bermudez",
+  "license": "None",
+  "homepage": "https://github.com/adrianaberm/ui-test#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "autoprefixer": "^8.6.5",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-eslint": "^4.0.0",
+    "eslint-plugin-react": "^7.12.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^4.0.2",
+    "gulp-postcss": "^7.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.4",
+    "nucleus-styleguide": "^1.1.1",
+    "postcss-preset-env": "^6.5.0",
+    "precss": "^3.1.2"
+  }
+}

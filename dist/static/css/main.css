@@ -1,0 +1,1370 @@
+@charset "UTF-8";
+/*------------------------------------*\
+  Estilos theme: Rule of Thumb
+  2019
+  Autor: Zemoga
+\*------------------------------------*/
+body,
+h1, h2, h3, h4, h5, h6,
+dl, dd, ol, ul {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 16px;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body * {
+  box-sizing: border-box; }
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+h1 {
+  font-size: 2em; }
+
+figcaption,
+figure,
+main {
+  display: block; }
+
+figure {
+  margin: 0; }
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+  a:active, a:hover {
+    outline-width: 0; }
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; }
+
+abbr[title],
+dfn[title] {
+  cursor: help; }
+
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder; }
+
+code,
+pre,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+blockquote {
+  margin: 0; }
+
+audio,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+img {
+  border-style: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+input {
+  line-height: normal; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0; }
+
+button,
+input {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button {
+  background-color: transparent; }
+
+optgroup {
+  font-weight: bold; }
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+fieldset {
+  margin: 0 2px;
+  padding: 0.35em 0.75em 0.625em; }
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  border: 0; }
+
+progress {
+  display: inline-block;
+  vertical-align: baseline; }
+
+textarea {
+  overflow: auto; }
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px; }
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+details,
+menu {
+  display: block; }
+
+summary {
+  display: list-item; }
+
+canvas {
+  display: inline-block; }
+
+template {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+/**
+ * $c-primary
+ * @color
+ * @section Primary
+ */
+/**
+ * $c-secondary
+ * @color
+ * @section Secondary
+ */
+/**
+ * $c-on-primary
+ * @color
+ * @section On
+ */
+/**
+ * $grey-dark
+ * @color
+ * @section On
+ */
+/**
+ * $grey-white
+ * @color
+ * @section On
+ */
+/**
+ * $c-black
+ * @color
+ * @section On
+ */
+/**
+ * $c-white
+ * @color
+ * @section On
+ */
+/**
+ * Mobile: min-width: @include media-query(small)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/**
+ * Mobile landscape: min-width: @include media-query(small-m)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/**
+ * Tablet: min-width: @include media-query(medium)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/**
+ * Desktop: min-width: @include media-query(wide)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/**
+ * Desktop Large: min-width: @include media-query(large)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/**
+ * Desktop Big: min-width: @include media-query(big)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/**
+ * Desktop Huge: min-width: @include media-query(huge)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+/*------------------------------------*\
+  Transversal Elements
+  #Styles for links
+\*------------------------------------*/
+a {
+  text-decoration: none;
+  color: #1cbbb4; }
+
+/*------------------------------------*\
+  Transversal Elements
+  #Styles for botones
+  \*------------------------------------*/
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline-width: 0;
+  border: none; }
+  button:focus {
+    outline-width: 0; }
+  button:disabled {
+    cursor: default; }
+
+/**
+ * @atom Default Button
+ * @section Navigation > Buttons
+ * @modifiers
+ *  .rt-btn-black black border button
+ * @markup
+ *  <button class="rt-btn">
+ *    Vote now
+ *  </button>
+ *  <button class="rt-btn rt-btn-black">
+ *    Vote now
+ *  </button>
+ */
+.rt-btn {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #fff;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  padding: 7px 20px;
+  transition: all 0.5s ease; }
+  .rt-btn:hover {
+    background: #000; }
+  .rt-btn.rt-btn-black {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid #000;
+    color: #000; }
+    .rt-btn.rt-btn-black:hover {
+      background: #fff; }
+
+/* social */
+.rt-icon {
+  display: inline-block;
+  font-size: 0;
+  color: #333;
+  margin: 15px; }
+  .rt-icon:hover {
+    color: #1cbbb4; }
+  .rt-icon:before {
+    content: "";
+    font-family: FontAwesome;
+    font-size: 20px;
+    font-size: 1.25rem; }
+  .rt-icon-fb:before {
+    content: "\f082"; }
+  .rt-icon-tw:before {
+    content: "\f099"; }
+
+/* vote options*/
+/**
+ * @atom Thumbs Buttons
+ * @section Navigation > Buttons
+ * @markup
+ *  <div class="rt-vote__item__options">
+ *   <label class="rt-vote__item__label" for="vote5">Thumbs Up
+ *    <input class="rt-vote__item__thumb rt-vote__item__thumb-up" type="radio" id="vote5" name="item3"><span class="rt-vote__item__check">Check</span>
+ *   </label>
+ *   <label class="rt-vote__item__label" for="vote6">Thumbs Down
+ *    <input class="rt-vote__item__thumb rt-vote__item__thumb-down" type="radio" id="vote6" name="item3"><span class="rt-vote__item__check">Check</span>
+ *   </label>
+ *   </div>
+ */
+.rt-vote__item__label {
+  cursor: pointer;
+  font-size: 0;
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .rt-vote__item__label .rt-vote__item__thumb {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+    .rt-vote__item__label .rt-vote__item__thumb:checked ~ .rt-vote__item__check:after {
+      display: block; }
+    .rt-vote__item__label .rt-vote__item__thumb:checked ~ .rt-vote__item__check {
+      border: 1px solid #fff; }
+  .rt-vote__item__label .rt-vote__item__thumb-up ~ .rt-vote__item__check {
+    background: #1cbbb4;
+    border: 1px solid #1cbbb4; }
+  .rt-vote__item__label .rt-vote__item__thumb-down ~ .rt-vote__item__check {
+    background: #ffad1d;
+    border: 1px solid #ffad1d; }
+    .rt-vote__item__label .rt-vote__item__thumb-down ~ .rt-vote__item__check:after {
+      content: "\f165"; }
+  .rt-vote__item__label:hover input ~ .rt-vote__item__check {
+    border: 1px solid #fff; }
+
+.rt-vote__item__check {
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  text-align: center; }
+  .rt-vote__item__check:after {
+    content: "\f164";
+    color: #fff;
+    display: block;
+    font-family: FontAwesome;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    height: 25px;
+    line-height: 22px;
+    width: 25px; }
+
+@media only screen and (min-width: 768px) {
+  .rt-btn {
+    padding: 9px 20px; }
+  .rt-vote__item__label {
+    padding-left: 35px; }
+  .rt-vote__item__check {
+    height: 35px;
+    width: 35px; }
+    .rt-vote__item__check:after {
+      font-size: 20px;
+      font-size: 1.25rem;
+      height: 35px;
+      line-height: 30px;
+      width: 35px; } }
+
+/*------------------------------------*\
+  Transversal Elements
+  #Styles for layout theme
+\*------------------------------------*/
+.rt-canvas {
+  margin: 0 auto;
+  max-width: 1025px; }
+
+img {
+  display: block;
+  width: 100%; }
+
+.rt-vote {
+  max-width: 1025px;
+  margin: 0 auto; }
+
+/*------------------------------------*\
+    Transversal Elements
+    #Styles for text
+\*------------------------------------*/
+/**
+  * El tamaño de la fuente se calcula en rems
+  * @atom Base: HTML
+  * @section Typography
+  * @markup
+  *  <p> Lorem ipsum dolor</p>
+  */
+html {
+  font-family: 'Lato', sans-serif;
+  color: #333; }
+
+h1,
+h2,
+h3 {
+  margin: 0 0 15px;
+  padding: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+.rt-strong {
+  font-weight: 700; }
+
+/**
+  * Class: .rt-sectionTitle, Font-family: Lato, Font-weight: light,  Font-size: 40px, 16px, color: grey
+  * @atom Section Title
+  * @section Typography
+  * @markup
+  *   <h2 class="rt-sectionTitle">Votes section</h3>
+  */
+.rt-sectionTitle {
+  font-size: 40px;
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding: 15px; }
+
+/**
+  * Class: .rt-sectionLead, Font-family: Lato, Font-weight: normal,  Font-size: 20px, 16px, color: grey
+  * @atom Section Lead
+  * @section Typography
+  * @markup
+  *   <h2 class="rt-sectionLead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis efficitur sem, eget laoreet nulla facilisis at. Mauris posuere in purus in rhoncus. </h3>
+  */
+.rt-sectionLead {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 0 15px; }
+
+@media only screen and (min-width: 1024px) {
+  .rt-sectionTitle, .rt-sectionLead {
+    padding-left: 0; } }
+
+/**
+ * Default header
+ * @section Header
+ * @structure Home Header
+ * @markup
+ *  <div style="position:relative">
+ *    <header class="rt-header">
+ *      <div class="rt-canvas">
+ *       <a class="rt-header__brand" href="/">Rule of Thumb.</a>
+ *       <input class="rt-menu-btn" type="checkbox" id="menu-btn">
+ *       <label class="rt-menu-icon" for="menu-btn"><span class="navicon"> </span></label>
+ *       <nav class="rt-header__nav">
+ *         <ul>
+ *           <li><a href="past-trials.html">Past Trials</a>
+ *             <ul class="rt-header__subnav">
+ *               <li><a href="">Sublevel 1</a></li>
+ *               <li><a href="">Sublevel 2</a></li>
+ *               <li><a href="">Sublevel 3</a></li>
+ *             </ul>
+ *           </li>
+ *           <li><a href="how-it-works.html">How It Works</a></li>
+ *           <li><a href="">Log In / Sign Up</a></li>
+ *         </ul>
+ *       </nav>
+ *     </div>
+ */
+.rt-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(top, black 0%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  left: 0;
+  margin: auto;
+  padding: 10px 0;
+  right: 0;
+  top: 0;
+  z-index: 9; }
+  .rt-header__brand {
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    font-size: 1.25rem;
+    padding: 10px 20px; }
+  .rt-header.rt-header-internal {
+    background: #000;
+    position: inherit; }
+
+.rt-menu-btn {
+  display: none; }
+  .rt-menu-btn 8:hover {
+    background-color: #1cbbb4; }
+  .rt-menu-btn:checked ~ .rt-header__nav {
+    max-height: 240px; }
+  .rt-menu-btn:checked ~ .rt-menu-icon .navicon {
+    background: transparent; }
+    .rt-menu-btn:checked ~ .rt-menu-icon .navicon:before {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+    .rt-menu-btn:checked ~ .rt-menu-icon .navicon:after {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+  .rt-menu-btn:checked ~ .rt-menu-icon:not(.steps) .navicon:before,
+  .rt-menu-btn:checked ~ .rt-menu-icon:not(.steps) .navicon:after {
+    top: 0; }
+
+.rt-menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 20px 20px;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .rt-menu-icon .navicon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px; }
+    .rt-menu-icon .navicon:before, .rt-menu-icon .navicon:after {
+      background: #fff;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%; }
+    .rt-menu-icon .navicon:before {
+      top: 5px; }
+    .rt-menu-icon .navicon:after {
+      top: -5px; }
+
+.rt-header__nav {
+  background: rgba(0, 0, 0, 0.8);
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  overflow: hidden; }
+  .rt-header__nav ul {
+    list-style: none;
+    padding: 15px; }
+    .rt-header__nav ul li a {
+      color: #fff;
+      display: block;
+      font-weight: 300;
+      padding: 15px;
+      text-align: center; }
+      .rt-header__nav ul li a:hover {
+        font-weight: 400; }
+
+.rt-header__subnav {
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  padding-left: 15px; }
+
+@media only screen and (min-width: 768px) {
+  .rt-header .rt-canvas {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .rt-header__brand {
+    display: block;
+    font-size: 32px;
+    font-size: 2rem;
+    padding-left: 0; }
+  .rt-header__nav {
+    background: transparent;
+    display: block;
+    margin-left: auto;
+    max-height: inherit;
+    vertical-align: middle; }
+    .rt-header__nav ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 0; }
+  .rt-header .rt-header__subnav {
+    display: none; }
+  .rt-menu-icon {
+    display: none; } }
+
+@media only screen and (min-width: 1024px) {
+  .rt-header {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 3, 3, 0.6)), to(rgba(3, 3, 3, 0)));
+    background: -webkit-linear-gradient(top, rgba(3, 3, 3, 0.6) 0%, rgba(3, 3, 3, 0) 100%);
+    background: -o-linear-gradient(top, rgba(3, 3, 3, 0.6) 0%, rgba(3, 3, 3, 0) 100%);
+    background: linear-gradient(to bottom, rgba(3, 3, 3, 0.6) 0%, rgba(3, 3, 3, 0) 100%); } }
+
+/*------------------------------------*\
+// Component: Footer
+//*------------------------------------*/
+.rt-footer {
+  border-top: 2px dotted #ebebeb;
+  margin: 33px auto;
+  max-width: 1025px;
+  padding: 15px; }
+
+.rt-footer__nav ul {
+  list-style: none; }
+  .rt-footer__nav ul li {
+    padding: 15px 0;
+    text-align: center; }
+    .rt-footer__nav ul li a {
+      color: #333;
+      font-size: 12px;
+      font-size: 0.75rem;
+      font-weight: 300; }
+      .rt-footer__nav ul li a:hover {
+        color: #1cbbb4; }
+
+.rt-footer__social {
+  padding: 15px;
+  text-align: center; }
+  .rt-footer__social p {
+    color: #333;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 300; }
+
+@media only screen and (min-width: 768px) {
+  .rt-footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 15px 0; }
+  .rt-footer__nav ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .rt-footer__nav ul li {
+      padding: 15px;
+      text-align: left; }
+      .rt-footer__nav ul li:first-of-type {
+        padding-left: 0; }
+  .rt-footer__social {
+    margin-left: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    align-items: center; }
+    .rt-footer__social p {
+      margin-right: 10px; }
+    .rt-footer__social .rt-icon {
+      margin: 0 10px; } }
+
+/*------------------------------------*\
+   Each Vote item styles
+   \*------------------------------------*/
+/**
+ * Vote Item
+ * @section Content Box
+ * @molecule Vote item
+ * @markup
+ *  <div class="rt-vote__item">
+ *    <div class="rt-vote__item__img"><img src="../static/images/img-kanye.jpg" alt="Kaney West image"></div>
+ *      <div class="rt-vote__item__inner">
+ *       <div class="rt-vote__item__content">
+ *         <h3 class="rt-vote__item__title thumbUp-badge">Kanye West</h3>
+ *          <p class="rt-vote__item__data">1 month ago<span>in Entertainment</span></p>
+ *          <p class="rt-vote__item__description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+ *        </div>
+ *      <div class="rt-vote__item__options">
+ *        <label class="rt-vote__item__label" for="vote1">Thumbs Up
+ *         <input class="rt-vote__item__thumb rt-vote__item__thumb-up" type="radio" id="vote1" name="item1"><span class="rt-vote__item__check">Check</span>
+ *        </label>
+ *        <label class="rt-vote__item__label" for="vote2">Thumbs Down
+ *         <input class="rt-vote__item__thumb rt-vote__item__thumb-down" type="radio" id="vote2" name="item1"><span class="rt-vote__item__check">Check</span>
+ *        </label>
+ *        <button class="rt-btn rt-vote__item__voteNow" type="submit" title="click to vote note">Vote now</button>
+ *      </div>
+ *    <div class="rt-vote__results">
+ *       <div class="rt-vote__results__thumb rt-vote__results__thumb-up" style="width:64%;">
+ *        <p>64<span>%</span></p>
+ *         </div>
+ *         <div class="rt-vote__results__thumb rt-vote__results__thumb-down" style="width:36%;">
+ *           <p>36<span>%</span></p>
+ *         </div>
+ *       </div>
+ *     </div>
+ * </div>
+ */
+.rt-vote__item {
+  margin: 15px;
+  overflow: hidden; }
+  .rt-vote__item__inner {
+    background: #000;
+    color: #fff;
+    -moz-flex: 1;
+    flex: 1;
+    z-index: 3; }
+  .rt-vote__item__img img {
+    width: 100%; }
+  .rt-vote__item__content {
+    padding: 20px 33px; }
+  .rt-vote__item__title {
+    font-size: 35px;
+    font-size: 2.1875rem;
+    font-weight: 300;
+    margin-bottom: 0; }
+  .rt-vote__item__data {
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 700; }
+    .rt-vote__item__data span {
+      font-weight: 300;
+      padding-left: 5px; }
+  .rt-vote__item__description {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 20px 0 0; }
+  .rt-vote__item__options {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 33px 33px; }
+  .rt-vote__item__voted {
+    display: none;
+    padding: 0 33px 33px; }
+    .rt-vote__item__voted .rt-vote__item__description {
+      padding-bottom: 33px; }
+
+.thumbUp-badge {
+  position: relative; }
+  .thumbUp-badge:before {
+    background: #1cbbb4;
+    bottom: 5px;
+    content: "\f164";
+    color: #fff;
+    display: block;
+    font-family: FontAwesome;
+    height: 28px;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 28px;
+    left: -33px;
+    position: absolute;
+    text-align: center;
+    width: 28px; }
+
+.thumbDown-badge {
+  position: relative; }
+  .thumbDown-badge:before {
+    background: #ffad1d;
+    bottom: 5px;
+    content: "\f165";
+    color: #fff;
+    display: block;
+    font-family: FontAwesome;
+    height: 28px;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 28px;
+    left: -33px;
+    position: absolute;
+    text-align: center;
+    width: 28px; }
+
+.rt-vote__results {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .rt-vote__results__thumb {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    align-items: center;
+    color: #fff;
+    height: 50px; }
+    .rt-vote__results__thumb p {
+      font-size: 25px;
+      font-size: 1.5625rem;
+      font-weight: 300; }
+      .rt-vote__results__thumb p:before, .rt-vote__results__thumb p:after {
+        content: "";
+        font-family: FontAwesome;
+        margin: 0 10px; }
+    .rt-vote__results__thumb-up {
+      background: rgba(28, 187, 180, 0.7); }
+      .rt-vote__results__thumb-up p:before {
+        content: "\f164"; }
+    .rt-vote__results__thumb-down {
+      -moz-justify-content: flex-end;
+      justify-content: flex-end;
+      background: rgba(255, 173, 29, 0.7); }
+      .rt-vote__results__thumb-down p {
+        text-align: right; }
+        .rt-vote__results__thumb-down p:after {
+          content: "\f165"; }
+
+@media only screen and (min-width: 768px) {
+  .rt-vote__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: flex-end;
+    align-items: flex-end;
+    min-height: 550px;
+    position: relative; }
+    .rt-vote__item:after {
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(99%, black), to(black));
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 99%, black 100%);
+      background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 99%, black 100%);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 99%, black 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      bottom: 0;
+      content: "";
+      height: 60%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      width: 100%; }
+    .rt-vote__item__img {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0; }
+      .rt-vote__item__img img {
+        transition: all 1s ease; }
+    .rt-vote__item__inner {
+      background: transparent; }
+    .rt-vote__item__title {
+      font-size: 45px;
+      font-size: 2.8125rem;
+      font-weight: 400; }
+    .rt-vote__item__content {
+      padding-left: 42px; }
+    .rt-vote__item__options {
+      padding-left: 42px; }
+    .rt-vote__item:hover .rt-vote__item__img img {
+      width: 110%; }
+  .thumbUp-badge:before {
+    height: 35px;
+    font-size: 20px;
+    font-size: 1.25rem;
+    left: -42px;
+    line-height: 35px;
+    width: 35px; }
+  .rt-vote__results__thumb p {
+    font-size: 29px;
+    font-size: 1.8125rem; }
+    .rt-vote__results__thumb p span {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+
+@media only screen and (min-width: 1024px) {
+  .rt-vote__item {
+    display: -moz-inline-flex;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: top;
+    width: 48%; }
+    .rt-vote__item:nth-child(odd) {
+      margin-left: 0; }
+    .rt-vote__item:nth-child(even) {
+      margin-right: 0; } }
+
+/*------------------------------------*\
+   Hero styles
+   \*------------------------------------*/
+.rt-hero {
+  position: relative; }
+  .rt-hero img {
+    margin: 0 auto; }
+
+.rt-infoBox {
+  background: #000;
+  color: #fff;
+  padding: 20px; }
+  .rt-infoBox__lead {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 300; }
+  .rt-infoBox__link {
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    padding: 15px 0; }
+    .rt-infoBox__link span {
+      text-decoration: underline; }
+    .rt-infoBox__link:before {
+      content: "\f266";
+      font-family: FontAwesome;
+      padding-right: 5px;
+      text-decoration: none; }
+    .rt-infoBox__link:hover span {
+      font-weight: 400; }
+  .rt-infoBox__vote {
+    padding: 20px 0; }
+  .rt-infoBox__voteOptions {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    align-items: center; }
+  .rt-infoBox__thumb {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    align-items: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    -moz-flex: 1;
+    flex: 1;
+    font-size: 0;
+    height: 50px;
+    pointer-events: none;
+    text-align: center; }
+    .rt-infoBox__thumb:before {
+      content: "";
+      color: #fff;
+      font-family: FontAwesome;
+      font-size: 20px;
+      font-size: 1.25rem; }
+    .rt-infoBox__thumb-up {
+      background: #1cbbb4; }
+      .rt-infoBox__thumb-up:before {
+        content: "\f164"; }
+      .rt-infoBox__thumb-up:hover {
+        background: #1cbbb4; }
+    .rt-infoBox__thumb-down {
+      background: #ffad1d; }
+      .rt-infoBox__thumb-down:before {
+        content: "\f165"; }
+      .rt-infoBox__thumb-down:hover {
+        background: #ffad1d; }
+
+.rt-hero__closingTime {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff; }
+  .rt-hero__closingTime p {
+    padding: 0 15px;
+    text-align: center;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    line-height: 50px; }
+    .rt-hero__closingTime p:last-of-type {
+      background: rgba(255, 255, 255, 0.3);
+      font-size: 20px;
+      font-size: 1.25rem;
+      margin-left: auto;
+      padding-left: 15px;
+      position: relative;
+      width: 70%; }
+      .rt-hero__closingTime p:last-of-type:before {
+        bottom: 0;
+        content: "";
+        display: block;
+        width: 0;
+        height: 0px;
+        border-left: solid 8px rgba(0, 0, 0, 0.3);
+        border-bottom: solid 8px transparent;
+        border-top: solid 8px transparent;
+        font-size: 0;
+        margin: auto;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        top: 0; }
+
+@media only screen and (min-width: 768px) {
+  .rt-hero {
+    min-height: 534px;
+    max-height: 740px;
+    overflow: hidden; }
+    .rt-hero .rt-canvas {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -moz-align-items: center;
+      align-items: center;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0; }
+  .rt-infoBox {
+    background: url(../images/bg-box-hero.jpg) no-repeat;
+    max-width: 492px;
+    margin: 15px;
+    overflow: hidden;
+    padding: 0;
+    position: relative; }
+    .rt-infoBox__title {
+      font-size: 60px;
+      font-size: 3.75rem;
+      line-height: 1;
+      font-weight: 400;
+      margin-bottom: 25px;
+      padding: 35px 35px 0; }
+      .rt-infoBox__title span {
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        font-weight: 300; }
+    .rt-infoBox__lead {
+      font-size: 21px;
+      font-size: 1.3125rem;
+      line-height: 24px;
+      padding: 0 35px 0; }
+    .rt-infoBox__link {
+      padding: 25px 35px 25px; }
+    .rt-infoBox__vote {
+      padding-top: 0; }
+      .rt-infoBox__vote h3 {
+        font-size: 20px;
+        font-size: 1.25rem;
+        padding: 0px 35px 20px; }
+    .rt-infoBox__thumb {
+      height: 80px; }
+      .rt-infoBox__thumb:before {
+        font-size: 40px;
+        font-size: 2.5rem; }
+  .rt-hero__closingTime {
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0; }
+    .rt-hero__closingTime p {
+      text-align: right;
+      width: 35%; }
+      .rt-hero__closingTime p:last-of-type {
+        background: rgba(255, 255, 255, 0.7);
+        color: #333;
+        text-align: left;
+        width: 65%;
+        font-size: 36px;
+        font-size: 2.25rem; }
+        .rt-hero__closingTime p:last-of-type span {
+          font-weight: 300;
+          text-transform: none; }
+        .rt-hero__closingTime p:last-of-type:before {
+          border-left: solid 10px rgba(0, 0, 0, 0.3); } }
+
+@media only screen and (min-width: 1024px) {
+  .rt-hero img {
+    margin-top: -10%; } }
+
+/*------------------------------------*\
+   Alerts styles
+\*------------------------------------*/
+/**
+ * Default grey alert, uses class .rt-alert
+ * @section Alerts
+ * @molecule Grey alerts
+ * @markup
+ *  <div class="rt-alert"><a class="rt-alert__closeBtn" href="" title="Click to close">Close</a>
+ *    <h2 class="rt-alert__title">Speakout. Be heard.<span>Be counted</span></h2>
+ *      <p class="rt-alert__lead">Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It's easy: You share your opinion, we analize and put the data ina public report.</p>
+ *  </div>
+ */
+.rt-alert {
+  background: #ebebeb;
+  margin: 20px 15px;
+  padding: 15px;
+  position: relative; }
+  .rt-alert__closeBtn {
+    display: block;
+    font-size: 0;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    width: 20px; }
+    .rt-alert__closeBtn:before, .rt-alert__closeBtn:after {
+      background: #333;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      width: 15px; }
+    .rt-alert__closeBtn:before {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .rt-alert__closeBtn:after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  .rt-alert__title {
+    font-size: 21px;
+    font-size: 1.3125rem;
+    font-weight: 300; }
+    .rt-alert__title span {
+      display: block;
+      font-size: 37px;
+      font-size: 2.3125rem;
+      font-weight: 700; }
+  .rt-alert__lead {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    font-weight: 300; }
+
+/*------------------------------------*\
+   Alerts styles
+\*------------------------------------*/
+/**
+ * Default grey alert, uses class .rt-alert
+ * @section Alerts
+ * @molecule Grey alerts
+ * @markup
+ *  <div class="rt-alert"><a class="rt-alert__closeBtn" href="" title="Click to close">Close</a>
+ *    <h2 class="rt-alert__title">Speakout. Be heard.<span>Be counted</span></h2>
+ *      <p class="rt-alert__lead">Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It's easy: You share your opinion, we analize and put the data ina public report.</p>
+ *  </div>
+ */
+.rt-alert {
+  background: #ebebeb;
+  margin: 20px 15px;
+  max-width: 1025px;
+  padding: 15px;
+  position: relative; }
+  .rt-alert__closeBtn {
+    display: block;
+    font-size: 0;
+    height: 25px;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    width: 25px; }
+    .rt-alert__closeBtn:before, .rt-alert__closeBtn:after {
+      background: #333;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      width: 15px; }
+    .rt-alert__closeBtn:before {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .rt-alert__closeBtn:after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  .rt-alert__title {
+    font-size: 21px;
+    font-size: 1.3125rem;
+    font-weight: 300; }
+    .rt-alert__title span {
+      display: block;
+      font-size: 37px;
+      font-size: 2.3125rem;
+      font-weight: 700; }
+  .rt-alert__lead {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    font-weight: 300; }
+
+.rt-callout {
+  background: url(../images/callout-bg.jpg);
+  max-width: 1025px;
+  margin: 20px 15px;
+  padding: 15px;
+  position: relative;
+  text-align: center; }
+  .rt-callout p {
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 300; }
+  .rt-callout .rt-btn {
+    margin-top: 15px; }
+
+@media only screen and (min-width: 768px) {
+  .rt-alert {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    align-items: center;
+    margin: 33px 15px;
+    padding: 24px; }
+    .rt-alert__closeBtn {
+      top: 50%; }
+    .rt-alert__title {
+      font-size: 22px;
+      font-size: 1.375rem;
+      margin-bottom: 0;
+      min-width: 190px; }
+    .rt-alert__lead {
+      width: -webkit-calc(100% -190px);
+      width: calc(100% -190px);
+      padding-left: 24px;
+      padding-right: 33px; }
+  .rt-callout {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    align-items: center;
+    margin: 33px auto;
+    padding: 24px; }
+    .rt-callout p {
+      font-size: 30px;
+      font-size: 1.875rem; }
+    .rt-callout .rt-btn {
+      font-size: 20px;
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-top: 0;
+      margin-left: auto; } }
+
+@media only screen and (min-width: 1024px) {
+  .rt-alert {
+    margin: 33px auto; } }
+
+/*------------------------------------*\
+    #Print styles
+\*------------------------------------*/
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }

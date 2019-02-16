@@ -1,0 +1,43 @@
+/*------------------------------------*\
+  Estilos theme: Rule of Thumb
+  2019
+  Autor: Zemoga
+\*------------------------------------*/
+
+@import 
+'generic/normalize';
+
+@import 
+'utils/variables/var-color',
+'utils/variables/var-gutter',
+'utils/variables/var-canvas',
+'utils/variables/var-breakpoint';
+
+@import 
+'utils/mix/mix-aspect-ratio',
+'utils/mix/mix-flex',
+'utils/mix/mix-font-family',
+'utils/mix/mix-font-rem',
+'utils/mix/mix-mediaquery',
+'utils/mix/mix-keyframes';
+
+@import 
+'utils/helpers/help-center',
+'utils/helpers/help-clearfix';
+
+@import 
+'patterns/anchor',
+'patterns/buttons',
+'patterns/layout',
+'patterns/type';
+
+
+@import 
+'components/header',
+'components/footer',
+'components/voteItem',
+'components/hero',
+'components/alerts',
+'components/callout';
+
+@import 'generic/print';

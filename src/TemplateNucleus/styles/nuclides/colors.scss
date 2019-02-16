@@ -1,0 +1,66 @@
+// colors.scss -- Colors for the Nucleus style guide and doc pages
+//
+// Copyright (C) 2016 Michael Seibt
+//
+// With contributions from: -
+//
+// This software may be modified and distributed under the terms
+// of the MIT license. See the LICENSE file for details.
+
+
+/** @color Accent Purple */
+$color--accent: #a0518e;
+
+/** @color Accent Pink */
+$color--pink: #E9426D;
+
+/** @color Hint accent color */
+$color--hint: #F59C00;
+
+/**
+ * Old hint color
+ * @color
+ * @deprecated
+ */
+$color--hint-old: #EC6839;
+
+/**
+ * Whitesmoke
+ * @color
+ * @section Grayscale
+ */
+$color--whitesmoke: #efefef;
+
+/**
+ * Light gray
+ * @color
+ * @section Grayscale
+ */
+$color--light-gray: #d8d8d8;
+
+/**
+ * Gray
+ * @color
+ * @section Grayscale
+ */
+$color--gray: #9b9b9b;
+
+/**
+ * Dark gray
+ * @color
+ * @section Grayscale
+ */
+$color--dark-gray: #4a4a4a;
+
+/**
+ * Black-ish gray
+ * @color
+ * @section Grayscale
+ */
+$color--blackish: #333;
+
+
+//color custom: alineados con la marca del cliente
+$custom-color--brand: #85B400;
+$custom-color--description: #F3705A;
+$color--accent: #FFA02F;

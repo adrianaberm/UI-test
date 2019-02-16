@@ -1,0 +1,45 @@
+//*------------------------------------*\
+    //Variables Breakpoint
+//*------------------------------------*/
+/**
+ * Mobile: min-width: @include media-query(small)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+$bp-small: 375px;
+/**
+ * Mobile landscape: min-width: @include media-query(small-m)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+$bp-small-m: 480px;
+/**
+ * Tablet: min-width: @include media-query(medium)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+$bp-medium: 768px;
+/**
+ * Desktop: min-width: @include media-query(wide)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+$bp-wide: 1024px;
+/**
+ * Desktop Large: min-width: @include media-query(large)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+$bp-large: 1180px;
+/**
+ * Desktop Big: min-width: @include media-query(big)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+$bp-big: 1280px;
+/**
+ * Desktop Huge: min-width: @include media-query(huge)
+ * @nuclide Breakpoint
+ * @section Variables Breakpoints
+ */
+$bp-huge: 1440px;

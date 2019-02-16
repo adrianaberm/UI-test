@@ -1,0 +1,198 @@
+//*------------------------------------*\
+// Component: Header
+//*------------------------------------*/
+
+
+/**
+ * Default header
+ * @section Header
+ * @structure Home Header
+ * @markup
+ *  <div style="position:relative">
+ *    <header class="rt-header">
+ *      <div class="rt-canvas">
+ *       <a class="rt-header__brand" href="/">Rule of Thumb.</a>
+ *       <input class="rt-menu-btn" type="checkbox" id="menu-btn">
+ *       <label class="rt-menu-icon" for="menu-btn"><span class="navicon"> </span></label>
+ *       <nav class="rt-header__nav">
+ *         <ul>
+ *           <li><a href="past-trials.html">Past Trials</a>
+ *             <ul class="rt-header__subnav">
+ *               <li><a href="">Sublevel 1</a></li>
+ *               <li><a href="">Sublevel 2</a></li>
+ *               <li><a href="">Sublevel 3</a></li>
+ *             </ul>
+ *           </li>
+ *           <li><a href="how-it-works.html">How It Works</a></li>
+ *           <li><a href="">Log In / Sign Up</a></li>
+ *         </ul>
+ *       </nav>
+ *     </div>
+ */
+
+
+ .rt-header {
+ 	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+ 	position: absolute;
+ 	left: 0;
+ 	margin: auto;
+ 	padding: 10px 0;
+ 	right: 0;
+ 	top: 0;
+ 	z-index: 9;
+
+ 	&__brand {
+ 		color: $c-white;
+ 		display: inline-block;
+ 		@include font-rem(20px);
+ 		padding: 10px 20px;
+ 	}
+
+ 	&.rt-header-internal {
+ 		background: $c-black;
+ 		position: inherit;
+ 	}
+ }
+
+ .rt-menu-btn{
+ 	display: none;
+ 	8:hover {
+ 		background-color: $primary;
+ 	}
+
+ 	&:checked {
+ 		~ .rt-header__nav {
+ 			max-height: 240px;
+ 		}
+ 		~ .rt-menu-icon .navicon {
+ 			background: transparent;
+ 			&:before {
+ 				transform: rotate(-45deg);
+ 			}
+ 			&:after {
+ 				transform: rotate(45deg);
+ 			}
+ 		}
+ 		~ .rt-menu-icon:not(.steps) .navicon:before, 
+ 		~ .rt-menu-icon:not(.steps) .navicon:after {
+ 			top: 0;
+ 		}
+ 	} 
+
+ }
+ .rt-menu-icon {
+ 	cursor: pointer;
+ 	display: inline-block;
+ 	float: right;
+ 	padding: 20px 20px;
+ 	position: relative;
+ 	user-select: none;
+
+ 	.navicon {
+ 		background: $c-white;
+ 		display: block;
+ 		height: 2px;
+ 		position: relative;
+ 		transition: background .2s ease-out;
+ 		width: 18px;
+
+ 		&:before, &:after{
+ 			background: $c-white;
+ 			content: '';
+ 			display: block;
+ 			height: 100%;
+ 			position: absolute;
+ 			transition: all .2s ease-out;
+ 			width: 100%;
+ 		}
+
+ 		&:before {
+ 			top: 5px;
+ 		}
+
+ 		&:after {
+ 			top: -5px;
+ 		}
+ 	}
+
+ }
+
+ .rt-header__nav {
+ 	background: rgba($c-black, 0.8);
+ 	clear: both;
+ 	max-height: 0;
+ 	transition: max-height .2s ease-out;
+
+ 	overflow: hidden;
+
+ 	ul {
+ 		list-style: none;
+ 		padding: $gutter-xs;
+ 		li {
+ 			a {
+ 				color: $c-white;
+ 				display: block;
+ 				font-weight: 300;
+ 				padding: $gutter-xs;
+ 				text-align: center;
+
+ 				&:hover {
+ 					font-weight: 400;
+ 				}
+ 			}
+ 		}
+ 	}
+
+
+ }
+
+ .rt-header__subnav {
+ 	background: rgba($c-black, 0.8);
+ 	display: none;
+ 	padding-left: $gutter-xs; 
+ }
+
+ @include media-query(medium) {
+ 	.rt-header {
+
+ 		.rt-canvas {
+ 			@include flexbox;
+ 		}
+ 		&__brand {
+ 			display: block;
+ 			@include font-rem(32px);
+ 			padding-left: 0;
+
+ 		}
+
+ 		&__nav {
+
+ 			background: transparent;
+ 			display: block;
+ 			margin-left: auto;
+ 			max-height: inherit;
+ 			vertical-align: middle;
+
+ 			ul {
+ 				@include flexbox;
+ 				padding: 0;
+ 			}
+ 		}
+
+ 		.rt-header__subnav {
+ 			display: none;
+ 		}
+ 	}
+
+ 	.rt-menu-icon {
+ 		display: none;
+ 	}
+ }
+
+
+ @include media-query(wide) {
+ 	.rt-header {
+ 		background: linear-gradient(to bottom, rgba(3,3,3,0.6) 0%,rgba(3,3,3,0) 100%);
+ 	}
+
+ }

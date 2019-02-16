@@ -1,0 +1,27 @@
+/*------------------------------------*\
+  Transversal Elements
+  #Styles for layout theme
+\*------------------------------------*/
+
+// contenedor section sin fondo
+
+.rt-canvas {
+	margin: 0 auto;
+	max-width: 1025px;
+}
+
+img {
+	display: block;
+  width: 100%;
+}
+
+.rt-vote {
+	max-width: 1025px;
+	margin: 0 auto;
+}
+
+@include media-query(medium) {
+
+  
+}
+

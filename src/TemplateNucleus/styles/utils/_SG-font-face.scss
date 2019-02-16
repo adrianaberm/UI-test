@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    #font-family, font-icon
+\*------------------------------------*/
+
+
+@font-face {
+  font-family: 'BandaBold';
+  src: url('#{$font-path}/bold-webfont.woff2') format('woff2'),
+  url('#{$font-path}/bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BandaSemibold';
+  src: url('#{$font-path}/semi_bold-webfont.woff2') format('woff2'),
+  url('#{$font-path}/semi_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BandaRegular';
+  src: url('#{$font-path}/regular-webfont.woff2') format('woff2'),
+  url('#{$font-path}/regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BandaLight';
+  src: url('#{$font-path}/light-webfont.woff2') format('woff2'),
+  url('#{$font-path}/light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BandaThin';
+  src: url('#{$font-path}/thin-webfont.woff2') format('woff2'),
+  url('#{$font-path}/thin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

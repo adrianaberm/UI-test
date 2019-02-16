@@ -1,0 +1,37 @@
+//-
+ * header.pug -- Render the style guide header
+ *
+ * Copyright (C) 2016 Michael Seibt
+ *
+ * With contributions from: -
+ *
+ * This software may be modified and distributed under the terms
+ * of the MIT license. See the LICENSE file for details.
+
+block nav
+  -var selected = 'nuclides'; //default
+
+-var menu = {'Utils': 'nuclides.html', 'Patterns': 'atoms.html', 'Components': 'molecules.html', 'Layout' : 'structures.html' };
+
+.SG-header
+  a.SG-logo(href="index.html", title='Ir al inicio de la Guía de estilos')
+    span.SG-logo__icon
+    //- img.SG-logo__img(src='img/brand__logo.svg', title='')
+    //- span.SG-logo__icon.SG-ico.SG-ico--logo
+    h1.SG-logo__name #{meta.title}
+
+
+  ul.SG-nav-icons
+    li
+      a.SG-nav-icons__item(title="Buscar",href='javascript:void(0)',data-d-search-box-trigger)
+        i.SG-ico.SG-ico--seach
+
+
+  ul.SG-nav
+    each link, title in menu
+      li
+        if selected === title
+          a.SG-nav__item.SG-nav__item--active(href=link)= title
+        else
+          a.SG-nav__item(href=link)= title
+

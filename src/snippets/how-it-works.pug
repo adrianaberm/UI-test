@@ -1,0 +1,25 @@
+extends _template
+
+block variables
+  //- variables head meta
+  -var varTitle       = 'How it works'
+  -var varDescription = 'We are a crowd sourced court of public opinion. Share your opinion.'
+  -var varAuthor      = 'Zemoga'
+
+   //- Adding homepage header
+  -var menuInternal = true
+ 
+
+block content
+
+  // Section level 1: Intro
+  section
+    .rt-canvas
+      h2.rt-sectionTitle How it works
+      p.rt-sectionLead Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis efficitur sem, eget laoreet nulla facilisis at. Mauris posuere in purus in rhoncus. 
+
+
+  include component/callout
+
+
+

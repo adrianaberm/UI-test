@@ -1,0 +1,24 @@
+extends _template
+
+block variables
+  //- variables head meta
+  -var varTitle       = 'Past Trials'
+  -var varDescription = 'We are a crowd sourced court of public opinion. Share your opinion.'
+  -var varAuthor      = 'Zemoga'
+
+  //- Adding homepage header
+  -var menuInternal = true
+ 
+
+block content
+
+  // Section level 1: Intro
+  section.rt-vote
+    h2.rt-sectionTitle Past Trials
+    .rt-canvas
+      include component/pastItem
+
+  include component/callout
+
+
+

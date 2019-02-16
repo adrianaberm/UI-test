@@ -1,0 +1,61 @@
+//-----------------------------------------------
+  Componente: HEAD - Home page
+//-----------------------------------------------
+if menuHome === true
+  header.rt-header
+    .rt-canvas
+      // Header Logo
+      a.rt-header__brand(href="/") Rule of Thumb.
+      input(class="rt-menu-btn" type="checkbox" id="menu-btn")
+      label(class="rt-menu-icon" for="menu-btn")
+        span.navicon 
+      // Header nav
+      nav.rt-header__nav
+        ul
+          li
+            a.has-submenu(href="past-trials.html") Past Trials
+            ul.rt-header__subnav
+             li
+              a(href="") Sublevel 1
+             li
+              a(href="") Sublevel 2
+             li
+              a(href="") Sublevel 3
+          li
+            a(href="how-it-works.html") How It Works
+          li
+            a(href="") Log In / Sign Up
+          li
+            a(href="")
+              i.fa.fa-search(aria-hidden="true")
+
+
+else if menuInternal === true
+  header.rt-header.rt-header-internal
+    .rt-canvas
+      // Header Logo
+      a.rt-header__brand(href="/") Rule of Thumb.
+      input(class="rt-menu-btn" type="checkbox" id="menu-btn")
+      label(class="rt-menu-icon" for="menu-btn")
+        span.navicon 
+      // Header nav
+      nav.rt-header__nav
+        ul
+          li
+            a(href="/") Home
+          li
+            a(href="past-trials.html") Past Trials
+            ul.rt-header__subnav
+             li
+              a(href="") Sublevel 1
+             li
+              a(href="") Sublevel 2
+             li
+              a(href="") Sublevel 3
+          li
+            a(href="how-it-works.html") How It Works
+          li
+            a(href="") Log In / Sign Up
+          li
+            a(href="")
+              i.fa.fa-search(aria-hidden="true")
