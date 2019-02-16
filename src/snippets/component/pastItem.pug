@@ -23,28 +23,9 @@ each selector in selectors
 
 			//- item vote options
 			.rt-vote__item__options
-				
-				label.rt-vote__item__label(for=selector.op1) Thumbs Up
-					input.rt-vote__item__thumb.rt-vote__item__thumb-up(
-						type="radio" 
-						id= selector.op1
-						name= selector.group)
-					span.rt-vote__item__check Check
-				
-				label.rt-vote__item__label(for=selector.op2) Thumbs Down
-					input.rt-vote__item__thumb.rt-vote__item__thumb-down(
-						type="radio" 
-						id= selector.op2
-						name= selector.group)
-					span.rt-vote__item__check Check
 
-				button.rt-btn.rt-vote__item__voteNow(type="submit" title="click to vote note") Vote now
+				a.rt-btn(href="#") View Full Report
 
-
-			//- item vote Thank you
-			.rt-vote__item__voted
-				p.rt-vote__item__description Thank you for voting
-				a.rt-btn(href="#" title="click to vote again") Vote again
 
 			//- vote results
 			.rt-vote__results

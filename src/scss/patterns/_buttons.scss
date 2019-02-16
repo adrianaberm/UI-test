@@ -1,23 +1,219 @@
 /*------------------------------------*\
   Transversal Elements
   #Styles for botones
-\*------------------------------------*/
+  \*------------------------------------*/
 
-button {
-  outline-width: 0;
-  border: none;
-
-  &:focus {
+  button {
+    appearance: none;
     outline-width: 0;
+    border: none;
+
+    &:focus {
+      outline-width: 0;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
   }
 
-  &:disabled {
-    cursor: default;
+/**
+ * @atom Default Button
+ * @section Navigation > Buttons
+ * @modifiers
+ *  .rt-btn-black black border button
+ * @markup
+ *  <button class="rt-btn">
+ *    Vote now
+ *  </button>
+ *  <button class="rt-btn rt-btn-black">
+ *    Vote now
+ *  </button>
+ */
+
+
+ .rt-btn{
+  background: rgba($c-black,0.3);
+  border: 1px solid $c-white;
+  color: $c-white;
+  display: inline-block;
+  @include font-rem(14px);
+  font-weight: 300;
+  padding: 7px 20px;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background: $c-black;
+  }
+
+  &.rt-btn-black {
+    background: rgba($c-white,0.3);
+    border: 1px solid $c-black; 
+    color: $c-black;
+
+    &:hover {
+      background: $c-white;
+    }
+  }
+
+
+}
+
+/* social */
+
+.rt-icon {
+  display: inline-block;
+  font-size: 0;
+  color: $grey;
+  margin: $gutter-xs;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:before {
+    content:"";
+    font-family: FontAwesome;
+     @include font-rem(20px);
+  }
+
+  &-fb {
+    &:before {
+      content: "\f082";
+    }
+  }
+
+  &-tw {
+    &:before {
+      content: "\f099";
+    }
   }
 }
 
 
 
+
+
+
+/* vote options*/
+
+/**
+ * @atom Thumbs Buttons
+ * @section Navigation > Buttons
+ * @markup
+ *  <div class="rt-vote__item__options">
+ *   <label class="rt-vote__item__label" for="vote5">Thumbs Up
+ *    <input class="rt-vote__item__thumb rt-vote__item__thumb-up" type="radio" id="vote5" name="item3"><span class="rt-vote__item__check">Check</span>
+ *   </label>
+ *   <label class="rt-vote__item__label" for="vote6">Thumbs Down
+ *    <input class="rt-vote__item__thumb rt-vote__item__thumb-down" type="radio" id="vote6" name="item3"><span class="rt-vote__item__check">Check</span>
+ *   </label>
+ *   </div>
+ */
+
+
+.rt-vote__item__label{
+  cursor: pointer;
+  font-size: 0;
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 10px;
+  user-select: none;
+
+
+  .rt-vote__item__thumb {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .rt-vote__item__check:after {
+      display: block;
+    }
+
+    &:checked ~ .rt-vote__item__check {
+    border: 1px solid $c-white; 
+  }
+
+  }
+
+  .rt-vote__item__thumb-up {
+    ~ .rt-vote__item__check{
+      background: $primary;
+      border: 1px solid $primary; 
+    }
+  }
+
+    .rt-vote__item__thumb-down {
+    ~ .rt-vote__item__check{
+      background: $secondary;
+      border: 1px solid $secondary; 
+
+      &:after {
+        content: "\f165";
+      }
+    }
+  }
+
+  &:hover {
+    input ~ .rt-vote__item__check{
+      border: 1px solid $c-white;
+
+    }
+  }
+
+
+}
+
+.rt-vote__item__check {
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  text-align: center;
+
+
+  &:after {
+    content: "\f164";
+    color: $c-white;
+    display: block;
+    font-family: FontAwesome;
+    @include font-rem(15px);
+    position: absolute;
+    text-align: center;
+    top: 0;
+    height: 25px;
+    line-height: 22px;
+  width: 25px;
+    
+  }
+}
+
 @include media-query(medium) {
+   .rt-btn{ 
+    padding: 9px 20px;
+  }
+
+  .rt-vote__item__label{
+    padding-left: 35px;
+  }
+
+  .rt-vote__item__check {
+      height: 35px;
+  width: 35px;
+
+    &:after {
+      @include font-rem(20px);
+
+            height: 35px;
+            line-height: 30px;
+  width: 35px;
+    }
+  }
 
 }

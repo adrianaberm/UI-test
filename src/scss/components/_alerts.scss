@@ -1,0 +1,72 @@
+/*------------------------------------*\
+   Alerts styles
+\*------------------------------------*/
+
+/**
+ * Default grey alert, uses class .rt-alert
+ * @section Alerts
+ * @molecule Grey alerts
+ * @markup
+ *  <div class="rt-alert"><a class="rt-alert__closeBtn" href="" title="Click to close">Close</a>
+ *    <h2 class="rt-alert__title">Speakout. Be heard.<span>Be counted</span></h2>
+ *      <p class="rt-alert__lead">Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It's easy: You share your opinion, we analize and put the data ina public report.</p>
+ *  </div>
+ */
+
+
+.rt-alert {
+  background: $grey-white;
+  margin: $gutter-s $gutter-xs;
+  padding: $gutter-xs;
+  position: relative;
+
+  &__closeBtn {
+    display: block;
+    font-size: 0;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    width: 20px;
+
+    &:before, &:after {
+      background: $grey;
+      content: "";
+      display: block;
+      height: 1px;
+      left:0;
+      position: absolute;
+      right: 0;
+      width: 15px;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+  }
+
+  &__title {
+    @include font-rem(21px);
+    font-weight: 300;
+
+    span {
+      display: block;
+      @include font-rem(37px);
+    font-weight: 700;
+    }
+  }
+
+  &__lead {
+    @include font-rem(15px);
+    font-weight: 300;
+  }
+}
+
+
+@include media-query(medium) {
+ 
+
+}

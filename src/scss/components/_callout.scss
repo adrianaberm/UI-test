@@ -1,0 +1,137 @@
+/*------------------------------------*\
+   Alerts styles
+\*------------------------------------*/
+
+/**
+ * Default grey alert, uses class .rt-alert
+ * @section Alerts
+ * @molecule Grey alerts
+ * @markup
+ *  <div class="rt-alert"><a class="rt-alert__closeBtn" href="" title="Click to close">Close</a>
+ *    <h2 class="rt-alert__title">Speakout. Be heard.<span>Be counted</span></h2>
+ *      <p class="rt-alert__lead">Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It's easy: You share your opinion, we analize and put the data ina public report.</p>
+ *  </div>
+ */
+
+
+.rt-alert {
+  background: $grey-white;
+  margin: $gutter-s $gutter-xs;
+  max-width: 1025px;
+  padding: $gutter-xs;
+  position: relative;
+
+
+  &__closeBtn {
+    display: block;
+    font-size: 0;
+    height: 25px;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    width: 25px;
+
+    &:before, &:after {
+      background: $grey;
+      content: "";
+      display: block;
+      height: 1px;
+      left:0;
+      position: absolute;
+      right: 0;
+      width: 15px;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+  }
+
+  &__title {
+    @include font-rem(21px);
+    font-weight: 300;
+
+    span {
+      display: block;
+      @include font-rem(37px);
+    font-weight: 700;
+    }
+  }
+
+  &__lead {
+    @include font-rem(15px);
+    font-weight: 300;
+  }
+}
+
+.rt-callout {
+  background: url(../images/callout-bg.jpg);
+  max-width: 1025px;
+  margin: $gutter-s $gutter-xs;
+  padding: $gutter-xs;
+  position: relative;
+  text-align: center;
+
+  p {
+    @include font-rem(20px);
+    font-weight: 300;
+  }
+
+  .rt-btn {
+    margin-top: $gutter-xs;
+  }
+}
+
+
+@include media-query(medium) {
+   .rt-alert {
+    @include flexbox;
+    @include align-items(center);
+  margin: $gutter-m $gutter-xs;
+  padding: 24px;
+
+    &__closeBtn {
+      top: 50%;
+    }
+
+  &__title {
+    @include font-rem(22px);
+    margin-bottom: 0;
+    min-width: 190px;
+  }
+
+  &__lead {
+    width: calc(100% -190px);
+    padding-left: 24px;
+    padding-right: $gutter-m;
+  }
+}
+ .rt-callout {
+  @include flexbox;
+  @include align-items(center);
+  margin: $gutter-m auto;
+  padding: 24px;
+  p {
+    @include font-rem(30px);
+  }
+
+  .rt-btn {
+    @include font-rem(20px);
+    font-weight: 400;
+    margin-top: 0;
+    margin-left: auto;
+
+  }
+}
+
+}
+
+@include media-query(wide) {
+  .rt-alert {
+
+  margin: $gutter-m auto}
+}

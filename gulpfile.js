@@ -10,6 +10,8 @@ var autoprefixer = require('autoprefixer')
 var postcssPresetEnv = require('postcss-preset-env')
 var precss = require('precss')
 var babel = require("gulp-babel");
+var data = require('gulp-data');
+
 
 var browserSync = require('browser-sync').create('Server')
 var reload = browserSync.reload
@@ -43,6 +45,9 @@ var noWebkitTransform = function (css) {
 
 gulp.task('html', function () {
   return gulp.src('./src/snippets/*.pug')
+	  .pipe(data(function(file) {
+	      return { require: require }
+	    }))
     .pipe(pug({pretty: true}))
     .pipe(gulp.dest('dist'))
 })
@@ -74,6 +79,7 @@ gulp.task('js', function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/static/js'))
 })
+
 
 function reloadBrowserMsg(){
   browserSync.reload();

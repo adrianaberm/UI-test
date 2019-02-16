@@ -1,20 +1,143 @@
 /*------------------------------------*\
    Each Vote item styles
    \*------------------------------------*/
+/**
+ * Vote Item
+ * @section Content Box
+ * @molecule Vote item
+ * @markup
+ *  <div class="rt-vote__item">
+ *    <div class="rt-vote__item__img"><img src="../static/images/img-kanye.jpg" alt="Kaney West image"></div>
+ *      <div class="rt-vote__item__inner">
+ *       <div class="rt-vote__item__content">
+ *         <h3 class="rt-vote__item__title thumbUp-badge">Kanye West</h3>
+ *          <p class="rt-vote__item__data">1 month ago<span>in Entertainment</span></p>
+ *          <p class="rt-vote__item__description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+ *        </div>
+ *      <div class="rt-vote__item__options">
+ *        <label class="rt-vote__item__label" for="vote1">Thumbs Up
+ *         <input class="rt-vote__item__thumb rt-vote__item__thumb-up" type="radio" id="vote1" name="item1"><span class="rt-vote__item__check">Check</span>
+ *        </label>
+ *        <label class="rt-vote__item__label" for="vote2">Thumbs Down
+ *         <input class="rt-vote__item__thumb rt-vote__item__thumb-down" type="radio" id="vote2" name="item1"><span class="rt-vote__item__check">Check</span>
+ *        </label>
+ *        <button class="rt-btn rt-vote__item__voteNow" type="submit" title="click to vote note">Vote now</button>
+ *      </div>
+ *    <div class="rt-vote__results">
+ *       <div class="rt-vote__results__thumb rt-vote__results__thumb-up" style="width:64%;">
+ *        <p>64<span>%</span></p>
+ *         </div>
+ *         <div class="rt-vote__results__thumb rt-vote__results__thumb-down" style="width:36%;">
+ *           <p>36<span>%</span></p>
+ *         </div>
+ *       </div>
+ *     </div>
+ * </div>
+ */
+
 
 .rt-vote__item {
-  margin: $gutter-xs 0; 
+  margin: $gutter-xs; 
+  overflow: hidden;
 
-  .rt-vote__item__inner {
+  &__inner {
     background: $c-black;
     color: $c-white;
     @include flex(1);
     z-index: 3;
   }
 
-  &__content {
-    padding: $gutter-s;
+  &__img {
+    img {
+      width: 100%;
+    }
   }
+
+  &__content {
+    padding: $gutter-s $gutter-m;
+  }
+
+  &__title {
+    @include font-rem(35px);
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+
+  &__data {
+    @include font-rem(12px);
+    font-weight: 700;
+
+    span {
+      font-weight: 300;
+      padding-left: 5px;
+    }
+  }
+
+  &__description {
+    @include font-rem(16px);
+    font-weight: 300;
+    margin: $gutter-s 0 0;
+  }
+
+  &__options {
+    @include flexbox;
+    padding: 0 $gutter-m $gutter-m;
+  }
+
+
+  &__voted {
+    display: none;
+    padding: 0 $gutter-m $gutter-m;
+
+    .rt-vote__item__description {
+      padding-bottom: $gutter-m;
+    }
+  }
+
+
+}
+
+.thumbUp-badge {
+  position: relative;
+  &:before {
+    background: $primary;
+    bottom: 5px;
+     content: "\f164";
+     color: $c-white;
+     display: block;
+     font-family: FontAwesome;
+     height: 28px;
+     @include font-rem(15px);
+     line-height: 28px;
+     left: - $gutter-m;
+     position: absolute;
+     text-align: center;
+     width: 28px;
+
+  }
+
+}
+
+.thumbDown-badge {
+  position: relative;
+  &:before {
+    background: $secondary;
+    bottom: 5px;
+     content: "\f165";
+     color: $c-white;
+     display: block;
+     font-family: FontAwesome;
+     height: 28px;
+     @include font-rem(15px);
+     line-height: 28px;
+     left: - $gutter-m;
+     position: absolute;
+     text-align: center;
+     width: 28px;
+
+  }
+
+}
 
   .rt-vote__results {
 
@@ -27,14 +150,17 @@
       height: 50px;
 
       p {
+        @include font-rem(25px);
+        font-weight: 300;
         &:before, &:after {
           content: "";
           font-family: FontAwesome;
+          margin: 0 10px;
         }
       }
 
       &-up {
-        background: rgba($primary,0.5);
+        background: rgba($primary,0.7);
 
         p {
           &:before {
@@ -46,7 +172,7 @@
 
       &-down {
         @include justify-content(flex-end);
-        background: rgba($secondary,0.5);
+        background: rgba($secondary,0.7);
 
         p {
           text-align: right;
@@ -58,9 +184,6 @@
     }
 
   }
-
-
-}
 @include media-query(medium) {
    .rt-vote__item {
     @include flexbox;
@@ -69,10 +192,10 @@
     position: relative;
 
     &:after {
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 99%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 99%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       bottom: 0;
       content: "";
-      height: 50%;
+      height: 60%;
       left: 0;
       position: absolute;
       right: 0;
@@ -86,14 +209,77 @@
       position: absolute;
       top: 0;
       right: 0;
+
+      img {
+        transition: all 1s ease;
+      }
     }
 
-  .rt-vote__item__inner {
+  &__inner {
     background: transparent;
   }
 
+  &__title {
+    @include font-rem(45px);
+    font-weight: 400;
+  }
+
+  &__content {
+    padding-left: 42px;
+  }
+
+  &__options {
+    padding-left: 42px;
+  }
+
+  &:hover {
+    .rt-vote__item__img {
+      img {
+        width: 110%;
+      }
+    }
+  }
+
+  }
+
+  .thumbUp-badge {
+    &:before {
+      height: 35px;
+      @include font-rem(20px);
+      left: -42px;
+      line-height: 35px;
+      width: 35px;
+
+    }
+  }
+
+  .rt-vote__results__thumb {
+    p {
+      @include font-rem(29px);
+
+      span {
+        @include font-rem(20px);
+      }
+    }
   }
 
 
 
+}
+
+
+@include media-query(wide) {
+  .rt-vote__item {
+    @include inline-flex; 
+    vertical-align: top;
+    width: 48%;
+
+    &:nth-child(odd) {
+      margin-left: 0;
+    }
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
 }

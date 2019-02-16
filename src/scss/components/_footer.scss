@@ -1,4 +1,74 @@
 /*------------------------------------*\
 // Component: Footer
 //*------------------------------------*/
- 
+
+.rt-footer {
+	border-top: 2px dotted $grey-white;
+	margin: $gutter-m auto;
+	max-width: 1025px;
+	padding: $gutter-xs;
+}
+
+.rt-footer__nav {
+	ul {
+		list-style: none;
+		li {
+			padding: $gutter-xs 0;
+			text-align: center;
+			a {
+				color: $grey;
+				@include font-rem(12px);
+				font-weight: 300;
+
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+	}
+}
+
+.rt-footer__social {
+	padding: $gutter-xs;
+	text-align: center;
+	p {
+		color: $grey;
+		@include font-rem(12px);
+		font-weight: 300;
+	}
+}
+
+@include media-query(medium) {
+	.rt-footer {
+		@include flexbox;
+		padding: $gutter-xs 0;
+	}
+	.rt-footer__nav {
+
+		ul {
+			@include flexbox;
+			li {
+				padding: $gutter-xs;
+				text-align: left;
+
+				&:first-of-type {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	.rt-footer__social {
+		margin-left: auto;
+		@include flexbox;
+		@include align-items(center);
+
+		p {
+			margin-right: 10px;
+		}
+		.rt-icon {
+			margin: 0 10px;
+		}
+
+	}
+}

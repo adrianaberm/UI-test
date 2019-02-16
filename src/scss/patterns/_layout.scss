@@ -7,13 +7,21 @@
 
 .rt-canvas {
 	margin: 0 auto;
-	max-width: 1440px;
+	max-width: 1025px;
 }
 
-@include media-query(wide) {
+img {
+	display: block;
+  width: 100%;
+}
+
+.rt-vote {
+	max-width: 1025px;
+	margin: 0 auto;
+}
+
+@include media-query(medium) {
+
   
 }
 
-@include media-query(huge) {
- 
-}
