@@ -19,12 +19,13 @@ each selector in selectors
 				h3.rt-vote__item__title(class=selector.voteClass)= selector.label
 				p.rt-vote__item__data= selector.date  
 					span= selector.section
-				p.rt-vote__item__description= selector.description
+				.rt-vote__item__description
+					p= selector.description
 
-			//- item vote options
-			.rt-vote__item__options
+					//- item vote options
+					.rt-vote__item__options
 
-				a.rt-btn(href="#") View Full Report
+						a.rt-btn(href="#") View Full Report
 
 
 			//- vote results

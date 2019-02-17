@@ -4,13 +4,12 @@
 
 /**
  * Default grey alert, uses class .rt-alert
- * @section Alerts
- * @molecule Grey alerts
+ * @section Callouts
+ * @molecule Default callout
  * @markup
- *  <div class="rt-alert"><a class="rt-alert__closeBtn" href="" title="Click to close">Close</a>
- *    <h2 class="rt-alert__title">Speakout. Be heard.<span>Be counted</span></h2>
- *      <p class="rt-alert__lead">Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It's easy: You share your opinion, we analize and put the data ina public report.</p>
- *  </div>
+ *  <div class="rt-callout">
+ *       <p>Is there anyone else you would want us to add?</p><a class="rt-btn rt-btn-black" href="" title="click to submit a name">Submit a name</a>
+ *     </div>
  */
 
 

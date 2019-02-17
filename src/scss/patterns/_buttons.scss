@@ -36,6 +36,7 @@
   background: rgba($c-black,0.3);
   border: 1px solid $c-white;
   color: $c-white;
+  cursor: pointer;
   display: inline-block;
   @include font-rem(14px);
   font-weight: 300;
@@ -116,10 +117,12 @@
   cursor: pointer;
   font-size: 0;
   display: inline-block;
+  height: 35px;
   position: relative;
   padding-left: 25px;
   margin-right: 10px;
   user-select: none;
+  vertical-align: top;
 
 
   .rt-vote__item__thumb {

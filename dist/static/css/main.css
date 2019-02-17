@@ -337,6 +337,7 @@ button {
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid #fff;
   color: #fff;
+  cursor: pointer;
   display: inline-block;
   font-size: 14px;
   font-size: 0.875rem;
@@ -388,13 +389,15 @@ button {
   cursor: pointer;
   font-size: 0;
   display: inline-block;
+  height: 35px;
   position: relative;
   padding-left: 25px;
   margin-right: 10px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; }
+          user-select: none;
+  vertical-align: top; }
   .rt-vote__item__label .rt-vote__item__thumb {
     position: absolute;
     opacity: 0;
@@ -685,6 +688,24 @@ p {
 /*------------------------------------*\
 // Component: Footer
 //*------------------------------------*/
+/**
+ * Default header
+ * @section Footer
+ * @structure Default footer
+ * @markup
+ *  <footer class="rt-footer">
+ *     <nav class="rt-footer__nav">
+ *       <ul>
+ *         <li><a href="" title="click to go to terms">Terms and Conditions</a></li>
+ *         <li><a href="" title="click to see privacy">Privacy Policy</a></li>
+ *         <li><a href="" title="Click to contact us">Contact Us</a></li>
+ *       </ul>
+ *     </nav>
+ *     <div class="rt-footer__social">
+ *       <p>Follow us</p><a class="rt-icon rt-icon-fb" href="" title="Follow us on Facebook">Facebook</a><a class="rt-icon rt-icon-tw" href="" title="Follow us on Twitter">Twitter</a>
+ *     </div>
+ *   </footer>
+ */
 .rt-footer {
   border-top: 2px dotted #ebebeb;
   margin: 33px auto;
@@ -752,32 +773,37 @@ p {
  * @molecule Vote item
  * @markup
  *  <div class="rt-vote__item">
- *    <div class="rt-vote__item__img"><img src="../static/images/img-kanye.jpg" alt="Kaney West image"></div>
- *      <div class="rt-vote__item__inner">
- *       <div class="rt-vote__item__content">
- *         <h3 class="rt-vote__item__title thumbUp-badge">Kanye West</h3>
- *          <p class="rt-vote__item__data">1 month ago<span>in Entertainment</span></p>
- *          <p class="rt-vote__item__description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
- *        </div>
- *      <div class="rt-vote__item__options">
- *        <label class="rt-vote__item__label" for="vote1">Thumbs Up
- *         <input class="rt-vote__item__thumb rt-vote__item__thumb-up" type="radio" id="vote1" name="item1"><span class="rt-vote__item__check">Check</span>
- *        </label>
- *        <label class="rt-vote__item__label" for="vote2">Thumbs Down
- *         <input class="rt-vote__item__thumb rt-vote__item__thumb-down" type="radio" id="vote2" name="item1"><span class="rt-vote__item__check">Check</span>
- *        </label>
- *        <button class="rt-btn rt-vote__item__voteNow" type="submit" title="click to vote note">Vote now</button>
- *      </div>
- *    <div class="rt-vote__results">
- *       <div class="rt-vote__results__thumb rt-vote__results__thumb-up" style="width:64%;">
- *        <p>64<span>%</span></p>
+ *           <div class="rt-vote__item__img"><img src="../static/images/img-kanye.jpg" alt="Kaney West image"></div>
+ *           <div class="rt-vote__item__inner">
+ *             <div class="rt-vote__item__content">
+ *               <h3 class="rt-vote__item__title thumbUp-badge">Kanye West</h3>
+ *               <p class="rt-vote__item__data">1 month ago<span>in Entertainment</span></p>
+ *               <div class="rt-vote__item__description">
+ *                 <p>Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+ *                 <div class="rt-vote__item__options">
+ *                   <label class="rt-vote__item__label" for="vote1">Thumbs Up
+ *                     <input class="rt-vote__item__thumb rt-vote__item__thumb-up" type="radio" id="vote1" name="item1" value="1"><span class="rt-vote__item__check">Check</span>
+ *                   </label>
+ *                   <label class="rt-vote__item__label" for="vote2">Thumbs Down
+ *                     <input class="rt-vote__item__thumb rt-vote__item__thumb-down" type="radio" id="vote2" name="item1" value="2"><span class="rt-vote__item__check">Check</span>
+ *                   </label>
+ *                   <button class="rt-btn rt-vote__item__voteNow" type="submit" title="click to vote note">Vote now</button>
+ *                 </div>
+ *                 <div class="rt-vote__item__voted">
+ *                   <p class="rt-vote__item__description">Thank you for voting</p><span class="rt-btn" role="button" title="click to vote again">Vote again</span>
+ *                 </div>
+ *               </div>
+ *             </div>
+ *             <div class="rt-vote__results">
+ *               <div class="rt-vote__results__thumb rt-vote__results__thumb-up" style="width:64%;">
+ *                 <p>64<span>%</span></p>
+ *               </div>
+ *               <div class="rt-vote__results__thumb rt-vote__results__thumb-down" style="width:36%;">
+ *                 <p>36<span>%</span></p>
+ *               </div>
+ *             </div>
+ *           </div>
  *         </div>
- *         <div class="rt-vote__results__thumb rt-vote__results__thumb-down" style="width:36%;">
- *           <p>36<span>%</span></p>
- *         </div>
- *       </div>
- *     </div>
- * </div>
  */
 .rt-vote__item {
   margin: 15px;
@@ -810,16 +836,14 @@ p {
     font-weight: 300;
     margin: 20px 0 0; }
   .rt-vote__item__options {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 0 33px 33px; }
+    padding: 33px 0 33px; }
   .rt-vote__item__voted {
     display: none;
-    padding: 0 33px 33px; }
+    padding: 0 0 33px; }
     .rt-vote__item__voted .rt-vote__item__description {
       padding-bottom: 33px; }
+    .rt-vote__item__voted .rt-vote__item__voteNow {
+      vertical-align: middle; }
 
 .thumbUp-badge {
   position: relative; }
@@ -932,11 +956,9 @@ p {
       font-weight: 400; }
     .rt-vote__item__content {
       padding-left: 42px; }
-    .rt-vote__item__options {
-      padding-left: 42px; }
     .rt-vote__item:hover .rt-vote__item__img img {
       width: 110%; }
-  .thumbUp-badge:before {
+  .thumbUp-badge:before, .thumbDown-badge:before {
     height: 35px;
     font-size: 20px;
     font-size: 1.25rem;
@@ -1218,13 +1240,12 @@ p {
 \*------------------------------------*/
 /**
  * Default grey alert, uses class .rt-alert
- * @section Alerts
- * @molecule Grey alerts
+ * @section Callouts
+ * @molecule Default callout
  * @markup
- *  <div class="rt-alert"><a class="rt-alert__closeBtn" href="" title="Click to close">Close</a>
- *    <h2 class="rt-alert__title">Speakout. Be heard.<span>Be counted</span></h2>
- *      <p class="rt-alert__lead">Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It's easy: You share your opinion, we analize and put the data ina public report.</p>
- *  </div>
+ *  <div class="rt-callout">
+ *       <p>Is there anyone else you would want us to add?</p><a class="rt-btn rt-btn-black" href="" title="click to submit a name">Submit a name</a>
+ *     </div>
  */
 .rt-alert {
   background: #ebebeb;

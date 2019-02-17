@@ -2,6 +2,25 @@
 // Component: Footer
 //*------------------------------------*/
 
+/**
+ * Default header
+ * @section Footer
+ * @structure Default footer
+ * @markup
+ *  <footer class="rt-footer">
+ *     <nav class="rt-footer__nav">
+ *       <ul>
+ *         <li><a href="" title="click to go to terms">Terms and Conditions</a></li>
+ *         <li><a href="" title="click to see privacy">Privacy Policy</a></li>
+ *         <li><a href="" title="Click to contact us">Contact Us</a></li>
+ *       </ul>
+ *     </nav>
+ *     <div class="rt-footer__social">
+ *       <p>Follow us</p><a class="rt-icon rt-icon-fb" href="" title="Follow us on Facebook">Facebook</a><a class="rt-icon rt-icon-tw" href="" title="Follow us on Twitter">Twitter</a>
+ *     </div>
+ *   </footer>
+ */
+
 .rt-footer {
 	border-top: 2px dotted $grey-white;
 	margin: $gutter-m auto;
