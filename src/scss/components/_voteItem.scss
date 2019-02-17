@@ -7,32 +7,37 @@
  * @molecule Vote item
  * @markup
  *  <div class="rt-vote__item">
- *    <div class="rt-vote__item__img"><img src="../static/images/img-kanye.jpg" alt="Kaney West image"></div>
- *      <div class="rt-vote__item__inner">
- *       <div class="rt-vote__item__content">
- *         <h3 class="rt-vote__item__title thumbUp-badge">Kanye West</h3>
- *          <p class="rt-vote__item__data">1 month ago<span>in Entertainment</span></p>
- *          <p class="rt-vote__item__description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
- *        </div>
- *      <div class="rt-vote__item__options">
- *        <label class="rt-vote__item__label" for="vote1">Thumbs Up
- *         <input class="rt-vote__item__thumb rt-vote__item__thumb-up" type="radio" id="vote1" name="item1"><span class="rt-vote__item__check">Check</span>
- *        </label>
- *        <label class="rt-vote__item__label" for="vote2">Thumbs Down
- *         <input class="rt-vote__item__thumb rt-vote__item__thumb-down" type="radio" id="vote2" name="item1"><span class="rt-vote__item__check">Check</span>
- *        </label>
- *        <button class="rt-btn rt-vote__item__voteNow" type="submit" title="click to vote note">Vote now</button>
- *      </div>
- *    <div class="rt-vote__results">
- *       <div class="rt-vote__results__thumb rt-vote__results__thumb-up" style="width:64%;">
- *        <p>64<span>%</span></p>
+ *           <div class="rt-vote__item__img"><img src="../static/images/img-kanye.jpg" alt="Kaney West image"></div>
+ *           <div class="rt-vote__item__inner">
+ *             <div class="rt-vote__item__content">
+ *               <h3 class="rt-vote__item__title thumbUp-badge">Kanye West</h3>
+ *               <p class="rt-vote__item__data">1 month ago<span>in Entertainment</span></p>
+ *               <div class="rt-vote__item__description">
+ *                 <p>Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+ *                 <div class="rt-vote__item__options">
+ *                   <label class="rt-vote__item__label" for="vote1">Thumbs Up
+ *                     <input class="rt-vote__item__thumb rt-vote__item__thumb-up" type="radio" id="vote1" name="item1" value="1"><span class="rt-vote__item__check">Check</span>
+ *                   </label>
+ *                   <label class="rt-vote__item__label" for="vote2">Thumbs Down
+ *                     <input class="rt-vote__item__thumb rt-vote__item__thumb-down" type="radio" id="vote2" name="item1" value="2"><span class="rt-vote__item__check">Check</span>
+ *                   </label>
+ *                   <button class="rt-btn rt-vote__item__voteNow" type="submit" title="click to vote note">Vote now</button>
+ *                 </div>
+ *                 <div class="rt-vote__item__voted">
+ *                   <p class="rt-vote__item__description">Thank you for voting</p><span class="rt-btn" role="button" title="click to vote again">Vote again</span>
+ *                 </div>
+ *               </div>
+ *             </div>
+ *             <div class="rt-vote__results">
+ *               <div class="rt-vote__results__thumb rt-vote__results__thumb-up" style="width:64%;">
+ *                 <p>64<span>%</span></p>
+ *               </div>
+ *               <div class="rt-vote__results__thumb rt-vote__results__thumb-down" style="width:36%;">
+ *                 <p>36<span>%</span></p>
+ *               </div>
+ *             </div>
+ *           </div>
  *         </div>
- *         <div class="rt-vote__results__thumb rt-vote__results__thumb-down" style="width:36%;">
- *           <p>36<span>%</span></p>
- *         </div>
- *       </div>
- *     </div>
- * </div>
  */
 
 
@@ -80,17 +85,20 @@
   }
 
   &__options {
-    @include flexbox;
-    padding: 0 $gutter-m $gutter-m;
+    padding: $gutter-m 0 $gutter-m;
   }
 
 
   &__voted {
     display: none;
-    padding: 0 $gutter-m $gutter-m;
+    padding: 0 0 $gutter-m;
 
     .rt-vote__item__description {
       padding-bottom: $gutter-m;
+    }
+
+    .rt-vote__item__voteNow {
+      vertical-align: middle;
     }
   }
 
@@ -228,9 +236,6 @@
     padding-left: 42px;
   }
 
-  &__options {
-    padding-left: 42px;
-  }
 
   &:hover {
     .rt-vote__item__img {
@@ -242,7 +247,7 @@
 
   }
 
-  .thumbUp-badge {
+  .thumbUp-badge, .thumbDown-badge {
     &:before {
       height: 35px;
       @include font-rem(20px);

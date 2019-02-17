@@ -19,32 +19,35 @@ each selector in selectors
 				h3.rt-vote__item__title(class=selector.voteClass)= selector.label
 				p.rt-vote__item__data= selector.date  
 					span= selector.section
-				p.rt-vote__item__description= selector.description
+				.rt-vote__item__description
+					p= selector.description
+					//- item vote options
+					.rt-vote__item__options
+						
+						
+						label.rt-vote__item__label(for=selector.op1) Thumbs Up
+							input.rt-vote__item__thumb.rt-vote__item__thumb-up(
+								type="radio" 
+								id= selector.op1
+								name= selector.group
+								value="1")
+							span.rt-vote__item__check Check
+						
+						label.rt-vote__item__label(for=selector.op2) Thumbs Down
+							input.rt-vote__item__thumb.rt-vote__item__thumb-down(
+								type="radio" 
+								id= selector.op2
+								name= selector.group
+								value="2")
+							span.rt-vote__item__check Check
 
-			//- item vote options
-			.rt-vote__item__options
-				
-				label.rt-vote__item__label(for=selector.op1) Thumbs Up
-					input.rt-vote__item__thumb.rt-vote__item__thumb-up(
-						type="radio" 
-						id= selector.op1
-						name= selector.group)
-					span.rt-vote__item__check Check
-				
-				label.rt-vote__item__label(for=selector.op2) Thumbs Down
-					input.rt-vote__item__thumb.rt-vote__item__thumb-down(
-						type="radio" 
-						id= selector.op2
-						name= selector.group)
-					span.rt-vote__item__check Check
-
-				button.rt-btn.rt-vote__item__voteNow(type="submit" title="click to vote note") Vote now
+						button.rt-btn.rt-vote__item__voteNow(type="submit" title="click to vote note") Vote now
 
 
-			//- item vote Thank you
-			.rt-vote__item__voted
-				p.rt-vote__item__description Thank you for voting
-				a.rt-btn(href="#" title="click to vote again") Vote again
+					//- item vote Thank you
+					.rt-vote__item__voted
+						p.rt-vote__item__description Thank you for voting
+						span.rt-btn(role="button" title="click to vote again") Vote again
 
 			//- vote results
 			.rt-vote__results
